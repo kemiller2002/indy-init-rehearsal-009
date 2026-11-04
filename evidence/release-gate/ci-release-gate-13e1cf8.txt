@@ -1,0 +1,6 @@
+[36;1mdotnet fsi "$RUNNER_TEMP/indy-init/tools/r9/r9.fsx" -- run-suites --obligations "$RUNNER_TEMP/obligations.json" --root . \[0m
+  REFUSED suite SU-OWN-DOTNET produced no result file (exit 1); see SU-OWN-DOTNET/run.log
+  REFUSED suite SU-BROWSER-WEBKIT produced no result file (exit 1); see SU-BROWSER-WEBKIT/run.log
+  REFUSED suite SU-DOTNET-LIVE produced no result file (exit 1); see SU-DOTNET-LIVE/run.log
+run-suites: REFUSED (3 cause(s))
+##[error]Process completed with exit code 4.
