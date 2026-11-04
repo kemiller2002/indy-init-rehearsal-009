@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Causa — investigations</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./vendor/forma/all.css">
+  <link rel="stylesheet" href="./causa.css">
+  <script type="importmap">{ "imports": { "@echelon-foundry/limen": "./vendor/limen/index.js" } }</script>
+</head>
+<body>
+  <a class="causa-skip" href="#main">Skip to content</a>
+  <header class="causa-header">
+    <nav aria-label="Primary" class="causa-nav">
+      <a href="#/" class="causa-brand">Causa</a>
+      <a href="#/">Investigations</a>
+      <button type="button" class="ef-button" data-event="newInvestigation">New investigation</button>
+    </nav>
+    <p class="causa-connection"><span data-text="connectionStatus">Loading…</span>
+      <template data-if="connected"><button type="button" class="ef-button causa-secondary causa-inline" data-event="disconnect">Disconnect</button></template></p>
+  </header>
+
+  <main id="main" class="causa-main" tabindex="-1">
+    <p id="causa-loading" class="causa-notice">Loading Causa…</p>
+    <p class="causa-notice" role="status" aria-live="polite" data-text="notice"></p>
+
+    <template data-if="showConnect">
+      <section class="causa-card" aria-labelledby="connect-heading">
+        <h2 id="connect-heading">Connect to GitHub</h2>
+        <form class="ef-form causa-form" data-event="connect" aria-describedby="connect-help">
+          <p id="connect-help" class="causa-help">Investigations are saved as files in a GitHub repository you can write to. The token is used only for GitHub requests; it is never shown or stored.</p>
+          <div class="ef-field"><label for="connect-owner">Repository owner</label>
+            <input id="connect-owner" name="owner" autocomplete="off" data-event="draft:owner" data-on="input" data-bind-value="draft_owner"></div>
+          <div class="ef-field"><label for="connect-repository">Repository</label>
+            <input id="connect-repository" name="repository" autocomplete="off" data-event="draft:repository" data-on="input" data-bind-value="draft_repository"></div>
+          <div class="ef-field"><label for="connect-branch">Branch</label>
+            <input id="connect-branch" name="branch" autocomplete="off" data-event="draft:branch" data-on="input" data-bind-value="draft_branch"></div>
+          <div class="ef-field"><label for="connect-token">GitHub token</label>
+            <input id="connect-token" name="token" type="password" autocomplete="off" data-event="draft:token" data-on="input"></div>
+          <template data-if="hasError_connection"><p class="causa-error" role="alert" data-text="error_connection"></p></template>
+          <template data-if="hasConnectError"><p class="causa-error" role="alert" data-text="connectError"></p></template>
+          <div class="causa-actions"><button type="submit" class="ef-button" data-bind-disabled="connecting">Connect</button></div>
+        </form>
+      </section>
+    </template>
+
+    <template data-if="onHome">
+      <section class="causa-card" aria-labelledby="home-heading">
+        <h1 id="home-heading">Investigations</h1>
+        <template data-if="hasIndexMessage"><p class="causa-help" data-text="indexMessage"></p></template>
+        <ul class="causa-list" aria-label="Saved investigations">
+          <template data-each="investigations" data-key="id"><li><a data-bind-href="href" data-text="id"></a></li></template>
+        </ul>
+        <div class="causa-actions">
+          <button type="button" class="ef-button" data-event="newInvestigation">Start a new investigation</button>
+          <template data-if="connected"><button type="button" class="ef-button" data-event="refreshIndex">Refresh list</button></template>
+        </div>
+      </section>
+    </template>
+
+    <template data-if="onStart">
+      <section class="causa-card" aria-labelledby="start-heading">
+        <h1 id="start-heading">Start an investigation</h1>
+        <form class="ef-form causa-form" data-event="startInvestigation" novalidate>
+          <div class="ef-field">
+            <label for="start-title">Title (optional)</label>
+            <input id="start-title" data-requirement-id="INV-002" data-event="draft:title" data-on="input" data-bind-value="draft_title" data-bind-aria-invalid="invalid_title" aria-describedby="start-title-error">
+            <template data-if="hasError_title"><p id="start-title-error" class="causa-error" role="alert" data-requirement-id="INV-020" data-text="error_title"></p></template>
+          </div>
+          <div class="ef-field">
+            <label for="start-problem">Problem statement</label>
+            <textarea id="start-problem" rows="4" data-requirement-id="INV-001" data-event="draft:problemStatement" data-on="input" data-bind-value="draft_problemStatement" data-bind-aria-invalid="invalid_problemStatement" aria-describedby="start-problem-error" aria-required="true"></textarea>
+            <template data-if="hasError_problemStatement"><div id="start-problem-error" class="causa-error" role="alert" data-requirement-id="INV-019"><span data-requirement-id="INV-021" data-text="error_problemStatement"></span></div></template>
+          </div>
+          <div class="ef-field">
+            <label for="start-question">Primary investigative question (optional)</label>
+            <textarea id="start-question" rows="2" data-requirement-id="INV-023" data-event="draft:question" data-on="input" data-bind-value="draft_question" data-bind-aria-invalid="invalid_question" aria-describedby="start-question-error"></textarea>
+            <template data-if="hasError_question"><p id="start-question-error" class="causa-error" role="alert" data-text="error_question"></p></template>
+          </div>
+          <div class="ef-field">
+            <label for="start-identifier">Investigation identifier</label>
+            <input id="start-identifier" data-requirement-id="INV-006" spellcheck="false" autocomplete="off" data-event="draft:identifier" data-on="input" data-bind-value="draft_identifier" data-bind-aria-invalid="invalid_identifier" aria-describedby="start-identifier-help start-identifier-error">
+            <p id="start-identifier-help" class="causa-help">A UUID. A new one is generated for you.</p>
+            <template data-if="hasError_identifier"><p id="start-identifier-error" class="causa-error" role="alert" data-text="error_identifier"></p></template>
+          </div>
+          <p class="causa-destination" role="note" aria-label="Persistence destination" data-requirement-id="INV-005" data-text="destination"></p>
+          <div class="causa-actions">
+            <button type="submit" class="ef-button" data-requirement-id="INV-004">Start investigation</button>
+            <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-022" data-event="cancelStart">Cancel</button>
+          </div>
+        </form>
+      </section>
+    </template>
+
+    <template data-if="onMissing">
+      <section class="causa-card"><h1>Page not found</h1><p><a href="#/">Back to investigations</a></p></section>
+    </template>
+
+    <template data-if="onWorkspace">
+      <article class="causa-workspace" aria-labelledby="ws-heading" data-requirement-id="INV-017">
+        <template data-if="hasLoadMessage">
+          <section class="causa-card"><p data-text="loadMessage" role="alert"></p>
+            <template data-if="loadFailed"><div class="causa-actions"><button type="button" class="ef-button" data-event="reloadSaved">Try loading again</button></div></template>
+          </section>
+        </template>
+        <template data-if="hasInvestigation">
+          <div class="causa-stack" data-requirement-id="INV-037">
+            <section class="causa-card causa-summary" aria-labelledby="ws-heading">
+              <h1 id="ws-heading" data-text="invTitle"></h1>
+              <dl class="causa-facts">
+                <dt>Identifier</dt><dd class="causa-mono" data-text="invId"></dd>
+                <dt>Created</dt><dd data-requirement-id="INV-007" data-text="invCreated"></dd>
+                <dt>State</dt><dd data-requirement-id="INV-018" data-text="invState"></dd>
+                <dt>Problem statement</dt><dd class="causa-prose" data-testid="current-statement" data-text="invStatement"></dd>
+                <dt>Original problem statement</dt><dd class="causa-prose" data-requirement-id="INV-008" data-text="invOriginalStatement"></dd>
+                <dt>Primary question</dt><dd class="causa-prose" data-testid="question" data-text="invQuestion"></dd>
+              </dl>
+              <div class="causa-savebar">
+                <p class="causa-save" role="status" aria-label="Save state" aria-live="polite" data-requirement-id="INV-016" data-bind-data-state="saveCode" data-text="saveState"></p>
+                <button type="button" class="ef-button" data-requirement-id="INV-015" data-event="save" data-bind-disabled="saveDisabled">Save</button>
+                <template data-if="canRetry"><button type="button" class="ef-button causa-secondary" data-event="retrySave">Retry save</button></template>
+                <template data-if="isConflict"><button type="button" class="ef-button causa-secondary" data-event="reloadSaved">Discard my changes and load the saved copy</button></template>
+              </div>
+              <div class="causa-actions">
+                <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-034" data-event="editDetails">Edit investigation details</button>
+              </div>
+            </section>
+
+            <template data-if="editingDetails">
+              <section id="causa-editor" class="causa-card causa-editor" aria-labelledby="editor-heading">
+                <h2 id="editor-heading" data-text="editorHeading"></h2>
+                <form class="ef-form causa-form" data-event="submitEditor" novalidate>
+                  <div class="ef-field"><label for="details-title">Title</label>
+                    <input id="details-title" data-event="draft:title" data-on="input" data-bind-value="draft_title" data-bind-aria-invalid="invalid_title" aria-describedby="details-title-error">
+                    <template data-if="hasError_title"><p id="details-title-error" class="causa-error" role="alert" data-text="error_title"></p></template></div>
+                  <div class="ef-field"><label for="details-problem">Problem statement</label>
+                    <textarea id="details-problem" rows="4" data-event="draft:problemStatement" data-on="input" data-bind-value="draft_problemStatement" data-bind-aria-invalid="invalid_problemStatement" aria-describedby="details-problem-error"></textarea>
+                    <template data-if="hasError_problemStatement"><p id="details-problem-error" class="causa-error" role="alert" data-text="error_problemStatement"></p></template></div>
+                  <div class="ef-field"><label for="details-question">Primary investigative question</label>
+                    <textarea id="details-question" rows="2" data-event="draft:question" data-on="input" data-bind-value="draft_question" data-bind-aria-invalid="invalid_question" aria-describedby="details-question-error"></textarea>
+                    <template data-if="hasError_question"><p id="details-question-error" class="causa-error" role="alert" data-text="error_question"></p></template></div>
+                  <div class="causa-actions"><button type="submit" class="ef-button">Record changes</button>
+                    <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-036" data-bind-data-requirement-instance="editorName" data-event="cancelEditor">Cancel</button></div>
+                </form>
+              </section>
+            </template>
+
+            <section class="causa-card" aria-labelledby="obs-heading">
+              <h2 id="obs-heading">Observations</h2>
+              <template data-if="noObservations"><p class="causa-help">No observations recorded yet.</p></template>
+              <ul class="causa-list" aria-label="Observations">
+                <template data-each="observations" data-key="id">
+                  <li class="causa-item" data-testid="observation" data-bind-data-id="id">
+                    <p class="causa-prose" data-testid="observation-text" data-text="text"></p>
+                    <template data-if="hasSource"><p class="causa-meta">Source: <span data-testid="observation-source" data-text="source"></span></p></template>
+                    <button type="button" class="ef-button causa-secondary" data-event="editObservation">Edit observation</button>
+                  </li>
+                </template>
+              </ul>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-014" data-event="newObservation">Record an observation</button></div></template>
+              <template data-if="editingObservation">
+                <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="obs-editor-heading">
+                  <h3 id="obs-editor-heading" data-text="editorHeading"></h3>
+                  <div class="ef-field"><label for="obs-text">Observation</label>
+                    <textarea id="obs-text" rows="4" data-requirement-id="INV-024" data-bind-data-requirement-instance="editorInstance" data-event="draft:observationText" data-on="input" data-bind-value="draft_observationText" data-bind-aria-invalid="invalid_observationText" aria-describedby="obs-text-error"></textarea>
+                    <template data-if="hasError_observationText"><p id="obs-text-error" class="causa-error" role="alert" data-text="error_observationText"></p></template></div>
+                  <div class="ef-field"><label for="obs-source">Source reference (optional)</label>
+                    <input id="obs-source" data-requirement-id="INV-025" data-bind-data-requirement-instance="editorInstance" data-event="draft:observationSource" data-on="input" data-bind-value="draft_observationSource" data-bind-aria-invalid="invalid_observationSource" aria-describedby="obs-source-error">
+                    <template data-if="hasError_observationSource"><p id="obs-source-error" class="causa-error" role="alert" data-text="error_observationSource"></p></template></div>
+                  <div class="causa-actions"><button type="submit" class="ef-button">Record observation</button>
+                    <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-036" data-bind-data-requirement-instance="editorName" data-event="cancelEditor">Cancel</button></div>
+                </form>
+              </template>
+            </section>
+
+            <section class="causa-card" aria-labelledby="hyp-heading">
+              <h2 id="hyp-heading">Hypotheses</h2>
+              <div class="causa-collection" role="region" aria-label="Hypotheses" data-requirement-id="INV-010">
+              <template data-if="noHypotheses"><p class="causa-help">No hypotheses recorded yet.</p></template>
+              <ul class="causa-list" aria-label="Hypotheses list">
+                <template data-each="hypotheses" data-key="id">
+                  <li class="causa-item causa-hypothesis" data-testid="hypothesis" data-bind-data-id="id">
+                    <p class="causa-kind">Hypothesis</p>
+                    <p class="causa-prose" data-testid="hypothesis-statement" data-text="statement"></p>
+                    <template data-if="hasExplanation"><p class="causa-meta">Explains: <span data-testid="hypothesis-explanation" data-text="explanation"></span></p></template>
+                    <template data-if="hasLinks"><p class="causa-meta">Evidence: <span data-testid="hypothesis-links" data-text="links"></span></p></template>
+                    <button type="button" class="ef-button causa-secondary" data-event="editHypothesis">Edit hypothesis</button>
+                  </li>
+                </template>
+              </ul>
+              </div>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-009" data-event="newHypothesis">Record a hypothesis</button></div></template>
+              <template data-if="editingHypothesis">
+                <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="hyp-editor-heading">
+                  <h3 id="hyp-editor-heading" data-text="editorHeading"></h3>
+                  <div class="ef-field"><label for="hyp-statement">Hypothesis statement</label>
+                    <textarea id="hyp-statement" rows="3" data-requirement-id="INV-026" data-bind-data-requirement-instance="editorInstance" data-event="draft:hypothesisStatement" data-on="input" data-bind-value="draft_hypothesisStatement" data-bind-aria-invalid="invalid_hypothesisStatement" aria-describedby="hyp-statement-error"></textarea>
+                    <template data-if="hasError_hypothesisStatement"><p id="hyp-statement-error" class="causa-error" role="alert" data-text="error_hypothesisStatement"></p></template></div>
+                  <div class="ef-field"><label for="hyp-explanation">What it explains (optional)</label>
+                    <textarea id="hyp-explanation" rows="3" data-requirement-id="INV-011" data-event="draft:hypothesisExplanation" data-on="input" data-bind-value="draft_hypothesisExplanation"></textarea></div>
+                  <div class="causa-actions"><button type="submit" class="ef-button">Record hypothesis</button>
+                    <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-036" data-bind-data-requirement-instance="editorName" data-event="cancelEditor">Cancel</button></div>
+                </form>
+              </template>
+            </section>
+
+            <section class="causa-card" aria-labelledby="ev-heading">
+              <h2 id="ev-heading">Evidence</h2>
+              <div class="causa-collection" role="region" aria-label="Evidence" data-requirement-id="INV-013">
+              <template data-if="noEvidence"><p class="causa-help">No evidence recorded yet.</p></template>
+              <ul class="causa-list" aria-label="Evidence list">
+                <template data-each="evidence" data-key="id">
+                  <li class="causa-item" data-testid="evidence" data-bind-data-id="id">
+                    <p class="causa-prose causa-strong" data-testid="evidence-label" data-text="label"></p>
+                    <template data-if="hasContent"><p class="causa-prose" data-testid="evidence-content" data-text="content"></p></template>
+                    <template data-if="hasSource"><p class="causa-meta">Source: <span data-testid="evidence-source" data-text="source"></span></p></template>
+                    <template data-if="hasUrl"><p class="causa-meta">Link: <a data-testid="evidence-url" rel="noopener noreferrer" target="_blank" data-bind-href="url" data-text="url"></a></p></template>
+                    <template data-if="hasLinks"><p class="causa-meta">Hypotheses: <span data-testid="evidence-links" data-text="links"></span></p></template>
+                    <button type="button" class="ef-button causa-secondary" data-event="editEvidence">Edit evidence</button>
+                  </li>
+                </template>
+              </ul>
+              </div>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-event="newEvidence">Record evidence</button></div></template>
+              <template data-if="editingEvidence">
+                <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="ev-editor-heading">
+                  <h3 id="ev-editor-heading" data-text="editorHeading"></h3>
+                  <div class="ef-field"><label for="ev-label">Evidence label</label>
+                    <input id="ev-label" data-requirement-id="INV-027" data-bind-data-requirement-instance="editorInstance" data-event="draft:evidenceLabel" data-on="input" data-bind-value="draft_evidenceLabel" data-bind-aria-invalid="invalid_evidenceLabel" aria-describedby="ev-label-error">
+                    <template data-if="hasError_evidenceLabel"><p id="ev-label-error" class="causa-error" role="alert" data-text="error_evidenceLabel"></p></template></div>
+                  <div class="ef-field"><label for="ev-content">Original content (optional)</label>
+                    <textarea id="ev-content" rows="4" data-requirement-id="INV-012" data-event="draft:evidenceContent" data-on="input" data-bind-value="draft_evidenceContent"></textarea></div>
+                  <div class="ef-field"><label for="ev-source">Source reference (optional)</label>
+                    <input id="ev-source" data-requirement-id="INV-028" data-bind-data-requirement-instance="editorInstance" data-event="draft:evidenceSource" data-on="input" data-bind-value="draft_evidenceSource" data-bind-aria-invalid="invalid_evidenceSource" aria-describedby="ev-source-error">
+                    <template data-if="hasError_evidenceSource"><p id="ev-source-error" class="causa-error" role="alert" data-text="error_evidenceSource"></p></template></div>
+                  <div class="ef-field"><label for="ev-url">Source URL (optional)</label>
+                    <input id="ev-url" type="text" inputmode="url" autocomplete="url" data-requirement-id="INV-029" data-bind-data-requirement-instance="editorInstance" data-event="draft:evidenceUrl" data-on="input" data-bind-value="draft_evidenceUrl" data-bind-aria-invalid="invalid_evidenceUrl" aria-describedby="ev-url-error">
+                    <template data-if="hasError_evidenceUrl"><p id="ev-url-error" class="causa-error" role="alert" data-text="error_evidenceUrl"></p></template></div>
+                  <div class="causa-actions"><button type="submit" class="ef-button">Record evidence</button>
+                    <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-036" data-bind-data-requirement-instance="editorName" data-event="cancelEditor">Cancel</button></div>
+                </form>
+              </template>
+            </section>
+
+            <section class="causa-card" aria-labelledby="rel-heading">
+              <h2 id="rel-heading">Evidence and hypotheses</h2>
+              <p class="causa-help">Each link records one current assessment of how a piece of evidence bears on a hypothesis, with its rationale.</p>
+              <ul class="causa-list" aria-label="Links between evidence and hypotheses">
+                <template data-each="relationships" data-key="id">
+                  <li class="causa-item" data-testid="relationship" data-bind-data-id="id" data-bind-data-kind="kind">
+                    <p><span class="causa-strong" data-testid="relationship-evidence" data-text="evidence"></span> — <span class="causa-badge" data-testid="relationship-kind" data-text="kindLabel"></span> — <span data-testid="relationship-hypothesis" data-text="hypothesis"></span></p>
+                    <p class="causa-meta">Rationale: <span data-testid="relationship-rationale" data-text="rationale"></span></p>
+                    <div class="causa-actions">
+                      <button type="button" class="ef-button causa-secondary" data-event="reassess">Reassess</button>
+                      <button type="button" class="ef-button causa-secondary" data-event="withdraw">Withdraw</button>
+                    </div>
+                  </li>
+                </template>
+              </ul>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-030" data-event="newLink">Link evidence to a hypothesis</button></div></template>
+              <template data-if="editingLink">
+                <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="link-editor-heading">
+                  <h3 id="link-editor-heading" data-text="editorHeading"></h3>
+                  <template data-if="editingNewLink">
+                    <div class="causa-stack">
+                      <div class="ef-field"><label for="link-evidence">Evidence</label>
+                        <select id="link-evidence" data-event="draft:linkEvidence" data-bind-value="draft_linkEvidence" data-bind-aria-invalid="invalid_linkEvidence" aria-describedby="link-evidence-error">
+                          <option value="">Choose evidence</option>
+                          <template data-each="evidenceOptions" data-key="id"><option data-bind-value="id" data-text="label"></option></template>
+                        </select>
+                        <template data-if="hasError_linkEvidence"><p id="link-evidence-error" class="causa-error" role="alert" data-text="error_linkEvidence"></p></template></div>
+                      <div class="ef-field"><label for="link-hypothesis">Hypothesis</label>
+                        <select id="link-hypothesis" data-event="draft:linkHypothesis" data-bind-value="draft_linkHypothesis" data-bind-aria-invalid="invalid_linkHypothesis" aria-describedby="link-hypothesis-error">
+                          <option value="">Choose a hypothesis</option>
+                          <template data-each="hypothesisOptions" data-key="id"><option data-bind-value="id" data-text="label"></option></template>
+                        </select>
+                        <template data-if="hasError_linkHypothesis"><p id="link-hypothesis-error" class="causa-error" role="alert" data-text="error_linkHypothesis"></p></template></div>
+                    </div>
+                  </template>
+                  <fieldset class="ef-choice-group causa-choices" data-requirement-id="INV-031" data-bind-data-requirement-instance="editorInstance" aria-describedby="link-kind-error">
+                    <legend>Relationship</legend>
+                    <label class="causa-choice"><input type="radio" name="relationshipKind" value="supports" data-event="draft:relationshipKind" data-bind-checked="kindSupports"> <span><strong>Supports</strong> — makes the hypothesis more credible</span></label>
+                    <label class="causa-choice"><input type="radio" name="relationshipKind" value="contradicts" data-event="draft:relationshipKind" data-bind-checked="kindContradicts"> <span><strong>Contradicts</strong> — makes the hypothesis less credible</span></label>
+                    <label class="causa-choice"><input type="radio" name="relationshipKind" value="consistent-with" data-event="draft:relationshipKind" data-bind-checked="kindConsistentWith"> <span><strong>Consistent with</strong> — fits, but does not favour it over competing hypotheses it also fits</span></label>
+                    <label class="causa-choice"><input type="radio" name="relationshipKind" value="inconclusive" data-event="draft:relationshipKind" data-bind-checked="kindInconclusive"> <span><strong>Inconclusive</strong> — assessed, but whether it fits cannot yet be determined</span></label>
+                    <template data-if="hasError_relationshipKind"><p id="link-kind-error" class="causa-error" role="alert" data-text="error_relationshipKind"></p></template>
+                  </fieldset>
+                  <div class="ef-field"><label for="link-rationale">Rationale</label>
+                    <textarea id="link-rationale" rows="3" data-requirement-id="INV-038" data-bind-data-requirement-instance="editorInstance" data-event="draft:rationale" data-on="input" data-bind-value="draft_rationale" data-bind-aria-invalid="invalid_rationale" aria-describedby="link-rationale-error"></textarea>
+                    <template data-if="hasError_rationale"><p id="link-rationale-error" class="causa-error" role="alert" data-text="error_rationale"></p></template></div>
+                  <div class="causa-actions"><button type="submit" class="ef-button">Record link</button>
+                    <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-036" data-bind-data-requirement-instance="editorName" data-event="cancelEditor">Cancel</button></div>
+                </form>
+              </template>
+              <template data-if="editingWithdraw">
+                <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="withdraw-heading">
+                  <h3 id="withdraw-heading" data-text="editorHeading"></h3>
+                  <div class="ef-field"><label for="withdraw-reason">Reason for withdrawing</label>
+                    <textarea id="withdraw-reason" rows="3" data-requirement-id="INV-038" data-bind-data-requirement-instance="editorInstance" data-event="draft:rationale" data-on="input" data-bind-value="draft_rationale" data-bind-aria-invalid="invalid_rationale" aria-describedby="withdraw-reason-error"></textarea>
+                    <template data-if="hasError_rationale"><p id="withdraw-reason-error" class="causa-error" role="alert" data-text="error_rationale"></p></template></div>
+                  <div class="causa-actions"><button type="submit" class="ef-button">Withdraw link</button>
+                    <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-036" data-bind-data-requirement-instance="editorName" data-event="cancelEditor">Cancel</button></div>
+                </form>
+              </template>
+            </section>
+
+            <section class="causa-card" aria-labelledby="con-heading">
+              <h2 id="con-heading">Conclusions</h2>
+              <p class="causa-help">A conclusion records what the investigation concludes so far. It does not resolve the investigation.</p>
+              <template data-if="noConclusions"><p class="causa-help">No conclusions recorded yet.</p></template>
+              <ul class="causa-list" aria-label="Conclusions">
+                <template data-each="conclusions" data-key="id">
+                  <li class="causa-item" data-testid="conclusion" data-bind-data-id="id">
+                    <p class="causa-prose" data-testid="conclusion-statement" data-text="statement"></p>
+                    <button type="button" class="ef-button causa-secondary" data-event="reviseConclusion">Revise conclusion</button>
+                  </li>
+                </template>
+              </ul>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-032" data-event="newConclusion">Record a conclusion</button></div></template>
+              <template data-if="editingConclusion">
+                <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="con-editor-heading">
+                  <h3 id="con-editor-heading" data-text="editorHeading"></h3>
+                  <div class="ef-field"><label for="con-statement">Conclusion statement</label>
+                    <textarea id="con-statement" rows="4" data-requirement-id="INV-033" data-bind-data-requirement-instance="editorInstance" data-event="draft:conclusionStatement" data-on="input" data-bind-value="draft_conclusionStatement" data-bind-aria-invalid="invalid_conclusionStatement" aria-describedby="con-statement-error"></textarea>
+                    <template data-if="hasError_conclusionStatement"><p id="con-statement-error" class="causa-error" role="alert" data-text="error_conclusionStatement"></p></template></div>
+                  <div class="causa-actions"><button type="submit" class="ef-button">Record conclusion</button>
+                    <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-036" data-bind-data-requirement-instance="editorName" data-event="cancelEditor">Cancel</button></div>
+                </form>
+              </template>
+            </section>
+
+            <section class="causa-card" aria-labelledby="hist-heading" data-requirement-id="INV-035">
+              <h2 id="hist-heading">History</h2>
+              <ol class="causa-history" aria-label="History, newest first">
+                <template data-each="history" data-key="seq">
+                  <li data-testid="history-entry"><span class="causa-meta"><span data-text="at"></span> · <span data-text="actor"></span></span> <span data-testid="history-text" data-text="text"></span></li>
+                </template>
+              </ol>
+            </section>
+          </div>
+        </template>
+      </article>
+    </template>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

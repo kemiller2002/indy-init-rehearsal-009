@@ -1,0 +1,65 @@
+{
+  "schema": "dokimos.fault-probes/1",
+  "probes": [
+    {
+      "id": "P-CONTENT-WIRE",
+      "description": "Wiring: the saved document drops every observation's source reference (Canonical encoder writes an empty string). The live round trip must notice the lost value after a reload.",
+      "obligations": ["INV-025/V5/save", "INV-025/V5/reload", "INV-037/V5/save", "INV-037/V5/isolation"],
+      "file": "src/Causa.Persistence/Canonical.fs",
+      "find": "\"text\", str o.Text; \"source\", str o.Source ]",
+      "replace": "\"text\", str o.Text; \"source\", str \"\" ]",
+      "build": ["npm", "run", "build"],
+      "command": ["env", "CI=1", "npx", "playwright", "test", "tests/browser/requirements/content-e2e.spec.mjs"]
+    },
+    {
+      "id": "P-CONTENT-WIRE-INPUT",
+      "description": "Wiring: the evidence label field reports its input under the wrong draft name, so the typed label never reaches the engine.",
+      "obligations": ["INV-027/V3/enter", "INV-027/V5/save", "INV-037/V5/isolation"],
+      "file": "web/index.html",
+      "find": "data-event=\"draft:evidenceLabel\"",
+      "replace": "data-event=\"draft:evidenceLabelX\"",
+      "build": ["npm", "run", "build"],
+      "command": ["env", "CI=1", "npx", "playwright", "test", "tests/browser/requirements/content-e2e.spec.mjs"]
+    },
+    {
+      "id": "P-CONTENT-PROJECTION",
+      "description": "Projection: the observation list projects each observation's source in place of its text.",
+      "obligations": ["INV-024/V5/reload", "INV-017/V5/reload", "INV-037/V5/isolation"],
+      "file": "src/Causa.App/Views/Investigation.fs",
+      "find": "\"text\", Text o.Text; \"source\", Text o.Source",
+      "replace": "\"text\", Text o.Source; \"source\", Text o.Source",
+      "build": ["npm", "run", "build"],
+      "command": ["env", "CI=1", "npx", "playwright", "test", "tests/browser/requirements/content-e2e.spec.mjs"]
+    },
+    {
+      "id": "P-CONTENT-VIEW",
+      "description": "View: the hypothesis list renders the explanation where the statement belongs.",
+      "obligations": ["INV-026/V5/reload", "INV-010/V4/outcome", "INV-037/V5/isolation"],
+      "file": "web/index.html",
+      "find": "data-testid=\"hypothesis-statement\" data-text=\"statement\"",
+      "replace": "data-testid=\"hypothesis-statement\" data-text=\"explanation\"",
+      "build": ["npm", "run", "build"],
+      "command": ["env", "CI=1", "npx", "playwright", "test", "tests/browser/requirements/content-e2e.spec.mjs"]
+    },
+    {
+      "id": "P-CONTENT-RELATION",
+      "description": "Relationships: reloading a saved link swaps its evidence and hypothesis ends.",
+      "obligations": ["INV-030/V5/reload", "INV-031/V5/reload", "INV-037/V5/isolation"],
+      "file": "src/Causa.Persistence/Canonical.fs",
+      "find": "RelationshipRecorded { Id = id; EvidenceId = e; HypothesisId = h;",
+      "replace": "RelationshipRecorded { Id = id; EvidenceId = h; HypothesisId = e;",
+      "build": ["npm", "run", "build"],
+      "command": ["env", "CI=1", "npx", "playwright", "test", "tests/browser/requirements/content-e2e.spec.mjs"]
+    },
+    {
+      "id": "P-CONTENT-RELATION-REASSESS",
+      "description": "Relationships: a reassessment keeps the old relationship kind (only the rationale changes).",
+      "obligations": ["INV-030/V5/update", "INV-031/V5/save"],
+      "file": "src/Causa.Domain/Evolve.fs",
+      "find": "{ r with Kind = kind; Rationale = rationale }",
+      "replace": "{ r with Rationale = rationale }",
+      "build": ["npm", "run", "build"],
+      "command": ["env", "CI=1", "npx", "playwright", "test", "tests/browser/requirements/content-e2e.spec.mjs"]
+    }
+  ]
+}

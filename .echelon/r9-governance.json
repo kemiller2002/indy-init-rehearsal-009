@@ -1,0 +1,9 @@
+{
+  "schema": "indy-init.r9-governance-record/1",
+  "indyInitCommit": "bc3c381df2840187a46799ea59f425ffe1b1ceed",
+  "policySha256": "98d427d974f4ef7f9c9ae79b52b386d15d17cfef88908b4c0037dcd9bdcd7e2c",
+  "workflowSha256": "4b81f2395ddc29c897c62e460da6000f2233ebd23b87be7826c2b8f3836f7ee8",
+  "completedBeforeGovernance": [
+    "ROS-INSTALL-3-25-0"
+  ]
+}

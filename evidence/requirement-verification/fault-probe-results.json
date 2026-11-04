@@ -1,0 +1,66 @@
+{
+  "probes": [
+    {
+      "detail": null,
+      "id": "P-CONTENT-WIRE",
+      "obligations": [
+        "INV-025/V5/save",
+        "INV-025/V5/reload",
+        "INV-037/V5/save",
+        "INV-037/V5/isolation"
+      ],
+      "outcome": "detected"
+    },
+    {
+      "detail": null,
+      "id": "P-CONTENT-WIRE-INPUT",
+      "obligations": [
+        "INV-027/V3/enter",
+        "INV-027/V5/save",
+        "INV-037/V5/isolation"
+      ],
+      "outcome": "detected"
+    },
+    {
+      "detail": null,
+      "id": "P-CONTENT-PROJECTION",
+      "obligations": [
+        "INV-024/V5/reload",
+        "INV-017/V5/reload",
+        "INV-037/V5/isolation"
+      ],
+      "outcome": "detected"
+    },
+    {
+      "detail": null,
+      "id": "P-CONTENT-VIEW",
+      "obligations": [
+        "INV-026/V5/reload",
+        "INV-010/V4/outcome",
+        "INV-037/V5/isolation"
+      ],
+      "outcome": "detected"
+    },
+    {
+      "detail": null,
+      "id": "P-CONTENT-RELATION",
+      "obligations": [
+        "INV-030/V5/reload",
+        "INV-031/V5/reload",
+        "INV-037/V5/isolation"
+      ],
+      "outcome": "detected"
+    },
+    {
+      "detail": null,
+      "id": "P-CONTENT-RELATION-REASSESS",
+      "obligations": [
+        "INV-030/V5/update",
+        "INV-031/V5/save"
+      ],
+      "outcome": "detected"
+    }
+  ],
+  "schema": "dokimos.fault-probe-results/1",
+  "sourceSha": "33d072da798a4ec762f15cebfc3c205c9014bbbd"
+}

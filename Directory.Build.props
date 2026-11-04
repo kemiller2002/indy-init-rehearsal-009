@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <!-- The .NET WebAssembly (Mono) interpreter asserts on F# explicit tail calls; the engine runs there. -->
+    <Tailcalls>false</Tailcalls>
+  </PropertyGroup>
+</Project>

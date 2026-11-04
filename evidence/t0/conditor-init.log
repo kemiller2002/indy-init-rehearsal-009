@@ -1,0 +1,83 @@
+Conditor plan for 'indy-init-root-cause-investigator'
+ 1. conditor:preset:indy-init@9fa1603d73591b64f36abc8cd90fbd515af22c37af786a55383a17e309e22473: ensure conditor.json
+ 2. praxis@3.25.0: praxis init
+ 3. praxis@3.25.0: praxis verify --strict
+ 4. ordo@1.20.0: ordo init
+ 5. ordo@1.20.0: ordo verify --integrity-only --json
+ 6. percepta@0.1.0: percepta-repo init
+ 7. percepta@0.1.0: percepta-repo verify --strict
+ 8. scaffold:fsharp-limen-web@1: ensure managed region agent-entry in AGENTS.md
+ 9. scaffold:fsharp-limen-web@1: ensure managed region build-outputs in .gitignore
+10. scaffold:fsharp-limen-web@1: ensure managed region ordo-baseline in context/CURRENT-STATE.md
+11. requirements:kickoff@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> kickoff/indy-init.kickoff.json
+12. requirements:kickoff-schema@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> kickoff/kickoff-manifest.schema.json
+13. requirements:boundary@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/HACKATHON-BOUNDARIES.md
+14. requirements:product@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/PRODUCT-REQUIREMENTS.md
+15. requirements:release@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/REQUIREMENTS.md
+16. requirements:semantics@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/INVESTIGATION-SEMANTICS.md
+17. requirements:evolution@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/SEMANTIC-EVOLUTION.md
+18. requirements:decisions@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/DESIGN-DECISION-BOUNDARIES.md
+19. requirements:core@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/CORE-DOMAIN-MODEL.md
+20. requirements:commands@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/COMMAND-EVENT-CATALOG.md
+21. requirements:transitions@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/STATE-TRANSITION-TABLES.md
+22. requirements:fsharp@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/FSHARP-TYPE-SHAPES.md
+23. requirements:policy@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/POLICY-ENGINE.md
+24. requirements:persistence@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/PERSISTENCE-CONTRACT.md
+25. requirements:ai@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/AI-ORCHESTRATION.md
+26. requirements:workspace@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/INVESTIGATION-WORKSPACE.md
+27. requirements:screens@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/SCREEN-CONTRACTS.md
+28. requirements:tests@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/DOMAIN-TEST-MATRIX.md
+29. requirements:security@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/SECURITY-THREAT-MODEL.md
+30. requirements:slices@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/IMPLEMENTATION-SLICES.md
+31. requirements:competition@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/COMPETITION-ALIGNMENT.md
+32. requirements:build-day@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/BUILD-DAY-EXECUTION.md
+33. requirements:kickoff-packet@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/KICKOFF-EXECUTION-PACKET.md
+34. requirements:fresh-agent-acceptance@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/FRESH-AGENT-FACTORY-ACCEPTANCE.md
+35. requirements:factory-rehearsal@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/FACTORY-REHEARSAL.md
+36. requirements:acceptance-scenarios@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/INVESTIGATION-ACCEPTANCE-SCENARIOS.md
+37. requirements:open-questions@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/OPEN-QUESTIONS.md
+38. requirements:semantic-compiler@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/SEMANTIC-COMPILER.md
+39. requirements:proof-bundle@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/ENGINEERING-PROOF-BUNDLE.md
+40. requirements:formal-validation@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/FORMAL-VALIDATION.md
+41. requirements:proof-carrying-proposals@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/PROOF-CARRYING-PROPOSALS.md
+42. requirements:tool-gateway@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/TOOL-EXECUTION-GATEWAY.md
+43. requirements:planner@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/INVESTIGATION-PLANNER.md
+44. requirements:bounded-autonomy@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/BOUNDED-AUTONOMOUS-INVESTIGATION.md
+45. requirements:multi-agent@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/MULTI-AGENT-INVESTIGATION.md
+46. requirements:cross-investigation@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/CROSS-INVESTIGATION-INTELLIGENCE.md
+47. requirements:research-harness@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/RESEARCH-HARNESS.md
+48. requirements:local-wasm-analytics@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/LOCAL-WASM-ANALYTICS.md
+49. requirements:evidence-ingestion@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/EVIDENCE-INGESTION-PIPELINE.md
+50. requirements:advanced-visualizations@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/ADVANCED-VISUALIZATIONS.md
+51. requirements:domain-pack-contract@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/DOMAIN-PACK-CONTRACT.md
+52. requirements:competition-ambition@2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3: materialize github:kemiller2002/Indy-init#2eee2d52b51173d4e8ec6e0a2d7ec28ea13011b3 -> docs/COMPETITION-AMBITION.md
+53. requirements:percepta-application@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/application.json
+54. requirements:percepta-s01-investigation-start@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s01-investigation-start.json
+55. requirements:percepta-s02-investigation-workspace@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s02-investigation-workspace.json
+56. requirements:percepta-s03-hypothesis-battlefield@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s03-hypothesis-battlefield.json
+57. requirements:percepta-s04-hypothesis-detail@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s04-hypothesis-detail.json
+58. requirements:percepta-s05-evidence-capture@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s05-evidence-capture.json
+59. requirements:percepta-s06-evidence-detail@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s06-evidence-detail.json
+60. requirements:percepta-s07-evidence-dependency@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s07-evidence-dependency.json
+61. requirements:percepta-s08-epistemic-blocker-detail@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s08-epistemic-blocker-detail.json
+62. requirements:percepta-s09-action-experiment-designer@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s09-action-experiment-designer.json
+63. requirements:percepta-s10-finding-result-capture@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s10-finding-result-capture.json
+64. requirements:percepta-s11-cause-review@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s11-cause-review.json
+65. requirements:percepta-s12-corrective-action@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s12-corrective-action.json
+66. requirements:percepta-s13-verification@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s13-verification.json
+67. requirements:percepta-s14-history-time-travel@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s14-history-time-travel.json
+68. requirements:percepta-s15-semantic-diff@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s15-semantic-diff.json
+69. requirements:percepta-s16-counterfactual-sandbox@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s16-counterfactual-sandbox.json
+70. requirements:percepta-s17-multi-agent-panel@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s17-multi-agent-panel.json
+71. requirements:percepta-s18-research-tournament@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s18-research-tournament.json
+72. requirements:percepta-s19-replay-spectator@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s19-replay-spectator.json
+73. requirements:percepta-s20-factory-view@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s20-factory-view.json
+74. requirements:percepta-s21-requirements-proof@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s21-requirements-proof.json
+75. requirements:percepta-s22-report-preview@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s22-report-preview.json
+76. requirements:percepta-s23-persistence-conflict-recovery@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s23-persistence-conflict-recovery.json
+77. requirements:percepta-s24-settings-semantic-manifest@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s24-settings-semantic-manifest.json
+78. requirements:percepta-s25-demo-health@9e6307734f5ae03f98155bdd0588fee13d701b50: materialize github:kemiller2002/percepta#9e6307734f5ae03f98155bdd0588fee13d701b50 -> .percepta/contracts/s25-demo-health.json
+79. praxis@3.25.0: praxis init
+80. praxis@3.25.0: praxis verify --strict
+81. praxis:mission@3.25.0: praxis mission COND-MISSION-001 -> ready
+Conditor completed successfully. Lock file: /home/user/indy-init-rehearsal-009/.conditor/lock.json

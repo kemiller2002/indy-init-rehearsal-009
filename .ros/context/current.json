@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "protocolVersion": "1.0.0",
+  "repository": "indy-init-rehearsal-009",
+  "actor": "ros-bootstrap",
+  "startedAt": "2026-11-04T00:30:04.744Z",
+  "updatedAt": "2026-11-04T01:12:37Z",
+  "baselineDirtyPaths": [],
+  "workItems": [
+    {
+      "id": "ROS-INSTALL-3-25-0",
+      "type": "mechanical",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "installation",
+          "path": ".ros/installation.json"
+        }
+      ],
+      "updatedAt": "2026-11-04T00:30:04.744Z",
+      "completedAt": "2026-11-04T00:30:04.744Z"
+    },
+    {
+      "id": "R9-CONTENT-001",
+      "type": "task",
+      "state": "active",
+      "semanticState": "active",
+      "evidence": [],
+      "updatedAt": "2026-11-04T01:12:37Z",
+      "telemetryExecutionIds": [
+        "EXE-20261104T011237660Z-959ad03f"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "description": "The requirements Causa is verified against: CAT-CAUSA-INVESTIGATION as ratified in Indy-init (INV-001..018 commit 0ab8ffd, INV-019..038 commit 7cefdc6), read at the Indy-init commit Rehearsal 009 started from. The manifest is compiled from this catalog alone; the application cannot change its obligations.",
+  "repository": "kemiller2002/Indy-init",
+  "commit": "bc3c381df2840187a46799ea59f425ffe1b1ceed",
+  "catalog": "requirements/catalogs/causa-investigation.requirement-catalog.json",
+  "catalogSha256": "19a036682876b496a1785890ab22203931eb7afe7bf519f4c15526ac36f2d5af"
+}

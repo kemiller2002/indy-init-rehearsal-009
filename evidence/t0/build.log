@@ -1,0 +1,29 @@
+  Determining projects to restore...
+  Restored /home/user/indy-init-rehearsal-009/src/Causa.Persistence/Causa.Persistence.fsproj (in 120 ms).
+  Restored /home/user/indy-init-rehearsal-009/src/Causa.Host/Causa.Host.csproj (in 120 ms).
+  Restored /home/user/indy-init-rehearsal-009/tests/Causa.Domain.Tests/Causa.Domain.Tests.fsproj (in 1.83 sec).
+  Restored /home/user/indy-init-rehearsal-009/tests/Causa.Invariants/Causa.Invariants.fsproj (in 1.98 sec).
+  Restored /home/user/indy-init-rehearsal-009/tests/Causa.Contract.Tests/Causa.Contract.Tests.fsproj (in 1.83 sec).
+  Restored /home/user/indy-init-rehearsal-009/tests/Causa.Persistence.Tests/Causa.Persistence.Tests.fsproj (in 1.98 sec).
+  Restored /home/user/indy-init-rehearsal-009/tests/Causa.TestSupport/Causa.TestSupport.fsproj (in 2 ms).
+  Restored /home/user/indy-init-rehearsal-009/src/Causa.Domain/Causa.Domain.fsproj (in 1 ms).
+  Restored /home/user/indy-init-rehearsal-009/src/Causa.App/Causa.App.fsproj (in 5 ms).
+  Restored /home/user/indy-init-rehearsal-009/tests/Causa.Acceptance/Causa.Acceptance.fsproj (in 4 ms).
+  Restored /home/user/indy-init-rehearsal-009/tests/Causa.App.Tests/Causa.App.Tests.fsproj (in 5 ms).
+  Causa.Domain -> /home/user/indy-init-rehearsal-009/src/Causa.Domain/bin/Debug/net10.0/Causa.Domain.dll
+  Causa.Domain.Tests -> /home/user/indy-init-rehearsal-009/tests/Causa.Domain.Tests/bin/Debug/net10.0/Causa.Domain.Tests.dll
+  Causa.Persistence -> /home/user/indy-init-rehearsal-009/src/Causa.Persistence/bin/Debug/net10.0/Causa.Persistence.dll
+  Causa.TestSupport -> /home/user/indy-init-rehearsal-009/tests/Causa.TestSupport/bin/Debug/net10.0/Causa.TestSupport.dll
+  Causa.App -> /home/user/indy-init-rehearsal-009/src/Causa.App/bin/Debug/net10.0/Causa.App.dll
+  Causa.Host -> /home/user/indy-init-rehearsal-009/src/Causa.Host/bin/Debug/net10.0/Causa.Host.dll
+  Causa.Acceptance -> /home/user/indy-init-rehearsal-009/tests/Causa.Acceptance/bin/Debug/net10.0/Causa.Acceptance.dll
+  Causa.Persistence.Tests -> /home/user/indy-init-rehearsal-009/tests/Causa.Persistence.Tests/bin/Debug/net10.0/Causa.Persistence.Tests.dll
+  Causa.Contract.Tests -> /home/user/indy-init-rehearsal-009/tests/Causa.Contract.Tests/bin/Debug/net10.0/Causa.Contract.Tests.dll
+  Causa.Invariants -> /home/user/indy-init-rehearsal-009/tests/Causa.Invariants/bin/Debug/net10.0/Causa.Invariants.dll
+  Causa.App.Tests -> /home/user/indy-init-rehearsal-009/tests/Causa.App.Tests/bin/Debug/net10.0/Causa.App.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:16.21

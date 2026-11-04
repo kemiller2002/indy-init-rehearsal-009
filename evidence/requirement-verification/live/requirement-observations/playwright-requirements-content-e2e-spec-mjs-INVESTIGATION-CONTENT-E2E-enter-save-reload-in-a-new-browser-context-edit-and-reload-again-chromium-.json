@@ -1,0 +1,2809 @@
+{
+  "schema": "dokimos.requirement-observations/1",
+  "runId": "41754817534-live",
+  "sourceCommit": "33d072da798a4ec762f15cebfc3c205c9014bbbd",
+  "manifestHash": "63936e8fab4692b0007490239079f0a2b5f56884d24fc8ee1bff0dfecdface21",
+  "facts": {
+    "domain-profile-selected": false
+  },
+  "probes": [
+    {
+      "obligation": "INV-001/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Problem statement",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-001/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Problem statement",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-001/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Problem statement",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-001/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Problem statement",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-002/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Title (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-002/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Title (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-002/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Title (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-002/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Title (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-023/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Primary investigative question (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-023/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Primary investigative question (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-023/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Primary investigative question (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-023/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Primary investigative question (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-006/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Investigation identifier",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-006/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Investigation identifier",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-006/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Investigation identifier",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-006/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Investigation identifier",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-004/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": "button",
+          "accessibleName": "Start investigation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-004/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": "button",
+          "accessibleName": "Start investigation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-004/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": "button",
+          "accessibleName": "Start investigation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-022/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-022/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-022/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-005/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "p",
+          "type": "",
+          "role": "note",
+          "accessibleName": "Persistence destination",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-005/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "p",
+          "type": "",
+          "role": "note",
+          "accessibleName": "Persistence destination",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-005/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "p",
+          "type": "",
+          "role": "note",
+          "accessibleName": "Persistence destination",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-002/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Pump P-101 trips (2026-11-04T01:34:56.713Z)",
+          "observed": "Pump P-101 trips (2026-11-04T01:34:56.713Z)",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Title (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-001/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+          "observed": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Problem statement",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-023/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Why does P-101 trip only on the night shift?",
+          "observed": "Why does P-101 trip only on the night shift?",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Primary investigative question (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-006/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "83e70618-d442-4cd5-83db-46d9f0ff1085",
+          "observed": "83e70618-d442-4cd5-83db-46d9f0ff1085",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Investigation identifier",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-004/V3/activate",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "#/investigation/83e70618-d442-4cd5-83db-46d9f0ff1085",
+      "observed": "#/investigation/83e70618-d442-4cd5-83db-46d9f0ff1085",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": "button",
+          "accessibleName": "Start investigation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-004/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+      "observed": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes."
+    },
+    {
+      "obligation": "INV-007/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "dd",
+          "type": "",
+          "role": "",
+          "accessibleName": "",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-007/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "dd",
+          "type": "",
+          "role": "",
+          "accessibleName": "",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-008/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "dd",
+          "type": "",
+          "role": "",
+          "accessibleName": "",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-008/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "dd",
+          "type": "",
+          "role": "",
+          "accessibleName": "",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-008/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+      "observed": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes."
+    },
+    {
+      "obligation": "INV-018/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "dd",
+          "type": "",
+          "role": "",
+          "accessibleName": "",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-018/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "dd",
+          "type": "",
+          "role": "",
+          "accessibleName": "",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-018/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Open",
+      "observed": "Open"
+    },
+    {
+      "obligation": "INV-009/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-009/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-009/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-014/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record an observation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-014/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record an observation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-014/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record an observation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-015/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Save",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-015/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Save",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-015/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Save",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-030/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Link evidence to a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-030/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Link evidence to a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-030/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Link evidence to a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-032/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a conclusion",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-032/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a conclusion",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-032/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a conclusion",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-034/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Edit investigation details",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-034/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Edit investigation details",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-034/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Edit investigation details",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-016/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "p",
+          "type": "",
+          "role": "status",
+          "accessibleName": "Save state",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-016/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "p",
+          "type": "",
+          "role": "status",
+          "accessibleName": "Save state",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-016/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "p",
+          "type": "",
+          "role": "status",
+          "accessibleName": "Save state",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-010/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "div",
+          "type": "",
+          "role": "region",
+          "accessibleName": "Hypotheses",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-010/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "div",
+          "type": "",
+          "role": "region",
+          "accessibleName": "Hypotheses",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-013/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "div",
+          "type": "",
+          "role": "region",
+          "accessibleName": "Evidence",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-013/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "div",
+          "type": "",
+          "role": "region",
+          "accessibleName": "Evidence",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-014/V3/activate",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "observation editor open",
+      "observed": "observation editor open",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record an observation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-024/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Observation",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-024/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Observation",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-024/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Observation",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-024/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Observation",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-025/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-025/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-025/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-025/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "observation",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "observation",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "observation",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-024/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.",
+          "observed": "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Observation",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-025/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "SCADA trip log, line 2",
+          "observed": "SCADA trip log, line 2",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-024/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Night-shift ambient temperature in the pump room fell to 4 °C.",
+          "observed": "Night-shift ambient temperature in the pump room fell to 4 °C.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Observation",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-025/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Building management export",
+          "observed": "Building management export",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-014/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]",
+      "observed": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]"
+    },
+    {
+      "obligation": "INV-036/V3/activate",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "editor closed; 0 recorded",
+      "observed": "editor closed; 0 recorded",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "observation",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]",
+      "observed": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]"
+    },
+    {
+      "obligation": "INV-009/V3/activate",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "hypothesis editor open",
+      "observed": "hypothesis editor open",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-026/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Hypothesis statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-026/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Hypothesis statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-026/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Hypothesis statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-026/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Hypothesis statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-011/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "What it explains (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-011/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "What it explains (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-011/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "What it explains (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-026/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Cold, viscous lubricant raises motor load past the overcurrent setting.",
+          "observed": "Cold, viscous lubricant raises motor load past the overcurrent setting.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Hypothesis statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-011/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Explains why trips cluster when the room is cold.",
+          "observed": "Explains why trips cluster when the room is cold.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "What it explains (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-026/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "The overcurrent relay setting was lowered during the last maintenance.",
+          "observed": "The overcurrent relay setting was lowered during the last maintenance.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Hypothesis statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-011/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Explains trips that began after maintenance.",
+          "observed": "Explains trips that began after maintenance.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "What it explains (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-009/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"]",
+      "observed": "[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"]"
+    },
+    {
+      "obligation": "INV-010/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"]",
+      "observed": "[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"]"
+    },
+    {
+      "obligation": "INV-027/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Evidence label",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-027/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Evidence label",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-027/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Evidence label",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-027/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Evidence label",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-028/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-028/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-028/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-028/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-029/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "text",
+          "role": "textbox",
+          "accessibleName": "Source URL (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-029/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "text",
+          "role": "textbox",
+          "accessibleName": "Source URL (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-029/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "text",
+          "role": "textbox",
+          "accessibleName": "Source URL (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-029/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "text",
+          "role": "textbox",
+          "accessibleName": "Source URL (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-012/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Original content (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-012/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Original content (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-012/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Original content (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-027/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Lubricant datasheet",
+          "observed": "Lubricant datasheet",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Evidence label",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-012/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Viscosity at 5 °C is 2.4x the value at 25 °C.",
+          "observed": "Viscosity at 5 °C is 2.4x the value at 25 °C.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Original content (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-028/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Supplier datasheet rev C",
+          "observed": "Supplier datasheet rev C",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-029/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "https://example.com/datasheets/lube-46.pdf",
+          "observed": "https://example.com/datasheets/lube-46.pdf",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "text",
+          "role": "textbox",
+          "accessibleName": "Source URL (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-027/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Relay settings record",
+          "observed": "Relay settings record",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Evidence label",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-012/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Overcurrent pickup unchanged at 42 A since commissioning.",
+          "observed": "Overcurrent pickup unchanged at 42 A since commissioning.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Original content (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-028/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Maintenance record MR-2291",
+          "observed": "Maintenance record MR-2291",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-029/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "https://example.com/records/MR-2291",
+          "observed": "https://example.com/records/MR-2291",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "input",
+          "type": "text",
+          "role": "textbox",
+          "accessibleName": "Source URL (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-030/V3/activate",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "link editor open",
+      "observed": "link editor open",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Link evidence to a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-031/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "fieldset",
+          "type": "",
+          "role": "group",
+          "accessibleName": "Relationship",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [
+            "supports",
+            "contradicts",
+            "consistent-with",
+            "inconclusive"
+          ],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-031/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "fieldset",
+          "type": "",
+          "role": "group",
+          "accessibleName": "Relationship",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [
+            "supports",
+            "contradicts",
+            "consistent-with",
+            "inconclusive"
+          ],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-031/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "fieldset",
+          "type": "",
+          "role": "group",
+          "accessibleName": "Relationship",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [
+            "supports",
+            "contradicts",
+            "consistent-with",
+            "inconclusive"
+          ],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-031/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "fieldset",
+          "type": "",
+          "role": "group",
+          "accessibleName": "Relationship",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [
+            "supports",
+            "contradicts",
+            "consistent-with",
+            "inconclusive"
+          ],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-031/V3/select",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "supports",
+          "observed": "supports",
+          "accepted": true
+        },
+        {
+          "value": "contradicts",
+          "observed": "contradicts",
+          "accepted": true
+        },
+        {
+          "value": "consistent-with",
+          "observed": "consistent-with",
+          "accepted": true
+        },
+        {
+          "value": "inconclusive",
+          "observed": "inconclusive",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "fieldset",
+          "type": "",
+          "role": "group",
+          "accessibleName": "Relationship",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [
+            "supports",
+            "contradicts",
+            "consistent-with",
+            "inconclusive"
+          ],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Higher viscosity at night temperatures would raise motor current.",
+          "observed": "Higher viscosity at night temperatures would raise motor current.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "The relay setting was not changed, so it cannot explain new trips.",
+          "observed": "The relay setting was not changed, so it cannot explain new trips.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Viscosity data fits a lower setting too, but does not favour it.",
+          "observed": "Viscosity data fits a lower setting too, but does not favour it.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "The relay record neither confirms nor rules out a load increase.",
+          "observed": "The relay record neither confirms nor rules out a load increase.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-030/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Lubricant datasheet|supports|Cold, viscous lubricant raises motor load past the overcurrent setting.|Higher viscosity at night temperatures would raise motor current.\",\"Relay settings record|contradicts|The overcurrent relay setting was lowered during the last maintenance.|The relay setting was not changed, so it cannot explain new trips.\",\"Lubricant datasheet|consistent-with|The overcurrent relay setting was lowered during the last maintenance.|Viscosity data fits a lower setting too, but does not favour it.\",\"Relay settings record|inconclusive|Cold, viscous lubricant raises motor load past the overcurrent setting.|The relay record neither confirms nor rules out a load increase.\"]",
+      "observed": "[\"Lubricant datasheet|supports|Cold, viscous lubricant raises motor load past the overcurrent setting.|Higher viscosity at night temperatures would raise motor current.\",\"Relay settings record|contradicts|The overcurrent relay setting was lowered during the last maintenance.|The relay setting was not changed, so it cannot explain new trips.\",\"Lubricant datasheet|consistent-with|The overcurrent relay setting was lowered during the last maintenance.|Viscosity data fits a lower setting too, but does not favour it.\",\"Relay settings record|inconclusive|Cold, viscous lubricant raises motor load past the overcurrent setting.|The relay record neither confirms nor rules out a load increase.\"]"
+    },
+    {
+      "obligation": "INV-032/V3/activate",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "conclusion editor open",
+      "observed": "conclusion editor open",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a conclusion",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-033/V1/exists",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Conclusion statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-033/V2/visible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Conclusion statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-033/V2/accessible",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Conclusion statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-033/V3/editable",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Conclusion statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-033/V3/enter",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "attempts": [
+        {
+          "value": "Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.",
+          "observed": "Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.",
+          "accepted": true
+        }
+      ],
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Conclusion statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-032/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\",\"Open\"]",
+      "observed": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\",\"Open\"]"
+    },
+    {
+      "obligation": "INV-015/V3/activate",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Saved to GitHub",
+      "observed": "Saved to GitHub",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Save",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-015/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Saved to GitHub",
+      "observed": "Saved to GitHub"
+    },
+    {
+      "obligation": "INV-001/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+      "observed": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes."
+    },
+    {
+      "obligation": "INV-002/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 trips (2026-11-04T01:34:56.713Z)",
+      "observed": "Pump P-101 trips (2026-11-04T01:34:56.713Z)"
+    },
+    {
+      "obligation": "INV-023/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Why does P-101 trip only on the night shift?",
+      "observed": "Why does P-101 trip only on the night shift?"
+    },
+    {
+      "obligation": "INV-024/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]",
+      "observed": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]"
+    },
+    {
+      "obligation": "INV-025/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"SCADA trip log, line 2\",\"Building management export\"]",
+      "observed": "[\"SCADA trip log, line 2\",\"Building management export\"]"
+    },
+    {
+      "obligation": "INV-026/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"]",
+      "observed": "[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"]"
+    },
+    {
+      "obligation": "INV-011/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"]",
+      "observed": "[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"]"
+    },
+    {
+      "obligation": "INV-027/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Lubricant datasheet\",\"Relay settings record\"]",
+      "observed": "[\"Lubricant datasheet\",\"Relay settings record\"]"
+    },
+    {
+      "obligation": "INV-012/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"]",
+      "observed": "[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"]"
+    },
+    {
+      "obligation": "INV-028/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"]",
+      "observed": "[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"]"
+    },
+    {
+      "obligation": "INV-029/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"]",
+      "observed": "[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"]"
+    },
+    {
+      "obligation": "INV-030/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Lubricant datasheet|supports|Cold, viscous lubricant raises motor load past the overcurrent setting.|Higher viscosity at night temperatures would raise motor current.\",\"Relay settings record|contradicts|The overcurrent relay setting was lowered during the last maintenance.|The relay setting was not changed, so it cannot explain new trips.\",\"Lubricant datasheet|consistent-with|The overcurrent relay setting was lowered during the last maintenance.|Viscosity data fits a lower setting too, but does not favour it.\",\"Relay settings record|inconclusive|Cold, viscous lubricant raises motor load past the overcurrent setting.|The relay record neither confirms nor rules out a load increase.\"]",
+      "observed": "[\"Lubricant datasheet|supports|Cold, viscous lubricant raises motor load past the overcurrent setting.|Higher viscosity at night temperatures would raise motor current.\",\"Relay settings record|contradicts|The overcurrent relay setting was lowered during the last maintenance.|The relay setting was not changed, so it cannot explain new trips.\",\"Lubricant datasheet|consistent-with|The overcurrent relay setting was lowered during the last maintenance.|Viscosity data fits a lower setting too, but does not favour it.\",\"Relay settings record|inconclusive|Cold, viscous lubricant raises motor load past the overcurrent setting.|The relay record neither confirms nor rules out a load increase.\"]"
+    },
+    {
+      "obligation": "INV-031/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"supports\",\"contradicts\",\"consistent-with\",\"inconclusive\"]",
+      "observed": "[\"supports\",\"contradicts\",\"consistent-with\",\"inconclusive\"]"
+    },
+    {
+      "obligation": "INV-038/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Higher viscosity at night temperatures would raise motor current.\",\"The relay setting was not changed, so it cannot explain new trips.\",\"Viscosity data fits a lower setting too, but does not favour it.\",\"The relay record neither confirms nor rules out a load increase.\"]",
+      "observed": "[\"Higher viscosity at night temperatures would raise motor current.\",\"The relay setting was not changed, so it cannot explain new trips.\",\"Viscosity data fits a lower setting too, but does not favour it.\",\"The relay record neither confirms nor rules out a load increase.\"]"
+    },
+    {
+      "obligation": "INV-032/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]",
+      "observed": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]"
+    },
+    {
+      "obligation": "INV-033/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]",
+      "observed": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]"
+    },
+    {
+      "obligation": "INV-008/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+      "observed": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes."
+    },
+    {
+      "obligation": "INV-017/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]",
+      "observed": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]"
+    },
+    {
+      "obligation": "INV-023/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Why does P-101 trip only on the night shift?",
+      "observed": "Why does P-101 trip only on the night shift?"
+    },
+    {
+      "obligation": "INV-024/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]",
+      "observed": "[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"]"
+    },
+    {
+      "obligation": "INV-025/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"SCADA trip log, line 2\",\"Building management export\"]",
+      "observed": "[\"SCADA trip log, line 2\",\"Building management export\"]"
+    },
+    {
+      "obligation": "INV-026/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"]",
+      "observed": "[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"]"
+    },
+    {
+      "obligation": "INV-027/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Lubricant datasheet\",\"Relay settings record\"]",
+      "observed": "[\"Lubricant datasheet\",\"Relay settings record\"]"
+    },
+    {
+      "obligation": "INV-028/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"]",
+      "observed": "[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"]"
+    },
+    {
+      "obligation": "INV-029/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"]",
+      "observed": "[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"]"
+    },
+    {
+      "obligation": "INV-030/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Lubricant datasheet|supports|Cold, viscous lubricant raises motor load past the overcurrent setting.|Higher viscosity at night temperatures would raise motor current.\",\"Relay settings record|contradicts|The overcurrent relay setting was lowered during the last maintenance.|The relay setting was not changed, so it cannot explain new trips.\",\"Lubricant datasheet|consistent-with|The overcurrent relay setting was lowered during the last maintenance.|Viscosity data fits a lower setting too, but does not favour it.\",\"Relay settings record|inconclusive|Cold, viscous lubricant raises motor load past the overcurrent setting.|The relay record neither confirms nor rules out a load increase.\"]",
+      "observed": "[\"Lubricant datasheet|supports|Cold, viscous lubricant raises motor load past the overcurrent setting.|Higher viscosity at night temperatures would raise motor current.\",\"Relay settings record|contradicts|The overcurrent relay setting was lowered during the last maintenance.|The relay setting was not changed, so it cannot explain new trips.\",\"Lubricant datasheet|consistent-with|The overcurrent relay setting was lowered during the last maintenance.|Viscosity data fits a lower setting too, but does not favour it.\",\"Relay settings record|inconclusive|Cold, viscous lubricant raises motor load past the overcurrent setting.|The relay record neither confirms nor rules out a load increase.\"]"
+    },
+    {
+      "obligation": "INV-031/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"supports\",\"contradicts\",\"consistent-with\",\"inconclusive\"]",
+      "observed": "[\"supports\",\"contradicts\",\"consistent-with\",\"inconclusive\"]"
+    },
+    {
+      "obligation": "INV-038/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Higher viscosity at night temperatures would raise motor current.\",\"The relay setting was not changed, so it cannot explain new trips.\",\"Viscosity data fits a lower setting too, but does not favour it.\",\"The relay record neither confirms nor rules out a load increase.\"]",
+      "observed": "[\"Higher viscosity at night temperatures would raise motor current.\",\"The relay setting was not changed, so it cannot explain new trips.\",\"Viscosity data fits a lower setting too, but does not favour it.\",\"The relay record neither confirms nor rules out a load increase.\"]"
+    },
+    {
+      "obligation": "INV-032/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]",
+      "observed": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]"
+    },
+    {
+      "obligation": "INV-033/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]",
+      "observed": "[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]"
+    },
+    {
+      "obligation": "INV-037/V5/isolation",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "{\"title\":\"Pump P-101 trips (2026-11-04T01:34:56.713Z)\",\"statement\":\"Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.\",\"question\":\"Why does P-101 trip only on the night shift?\",\"observations\":[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"],\"observationSources\":[\"SCADA trip log, line 2\",\"Building management export\"],\"hypotheses\":[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"],\"explanations\":[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"],\"evidence\":[\"Lubricant datasheet\",\"Relay settings record\"],\"evidenceContent\":[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"],\"evidenceSources\":[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"],\"evidenceUrls\":[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"],\"links\":[{\"evidence\":\"Lubricant datasheet\",\"kind\":\"supports\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"Higher viscosity at night temperatures would raise motor current.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"contradicts\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"The relay setting was not changed, so it cannot explain new trips.\"},{\"evidence\":\"Lubricant datasheet\",\"kind\":\"consistent-with\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"Viscosity data fits a lower setting too, but does not favour it.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"inconclusive\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"The relay record neither confirms nor rules out a load increase.\"}],\"conclusions\":[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]}",
+      "observed": "{\"title\":\"Pump P-101 trips (2026-11-04T01:34:56.713Z)\",\"statement\":\"Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.\",\"question\":\"Why does P-101 trip only on the night shift?\",\"observations\":[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"],\"observationSources\":[\"SCADA trip log, line 2\",\"Building management export\"],\"hypotheses\":[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"],\"explanations\":[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"],\"evidence\":[\"Lubricant datasheet\",\"Relay settings record\"],\"evidenceContent\":[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"],\"evidenceSources\":[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"],\"evidenceUrls\":[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"],\"links\":[{\"evidence\":\"Lubricant datasheet\",\"kind\":\"supports\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"Higher viscosity at night temperatures would raise motor current.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"contradicts\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"The relay setting was not changed, so it cannot explain new trips.\"},{\"evidence\":\"Lubricant datasheet\",\"kind\":\"consistent-with\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"Viscosity data fits a lower setting too, but does not favour it.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"inconclusive\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"The relay record neither confirms nor rules out a load increase.\"}],\"conclusions\":[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]}"
+    },
+    {
+      "obligation": "INV-037/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "{\"title\":\"Pump P-101 trips (2026-11-04T01:34:56.713Z)\",\"statement\":\"Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.\",\"question\":\"Why does P-101 trip only on the night shift?\",\"observations\":[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"],\"observationSources\":[\"SCADA trip log, line 2\",\"Building management export\"],\"hypotheses\":[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"],\"explanations\":[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"],\"evidence\":[\"Lubricant datasheet\",\"Relay settings record\"],\"evidenceContent\":[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"],\"evidenceSources\":[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"],\"evidenceUrls\":[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"],\"links\":[{\"evidence\":\"Lubricant datasheet\",\"kind\":\"supports\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"Higher viscosity at night temperatures would raise motor current.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"contradicts\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"The relay setting was not changed, so it cannot explain new trips.\"},{\"evidence\":\"Lubricant datasheet\",\"kind\":\"consistent-with\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"Viscosity data fits a lower setting too, but does not favour it.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"inconclusive\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"The relay record neither confirms nor rules out a load increase.\"}],\"conclusions\":[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]}",
+      "observed": "{\"title\":\"Pump P-101 trips (2026-11-04T01:34:56.713Z)\",\"statement\":\"Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.\",\"question\":\"Why does P-101 trip only on the night shift?\",\"observations\":[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"],\"observationSources\":[\"SCADA trip log, line 2\",\"Building management export\"],\"hypotheses\":[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"],\"explanations\":[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"],\"evidence\":[\"Lubricant datasheet\",\"Relay settings record\"],\"evidenceContent\":[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"],\"evidenceSources\":[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"],\"evidenceUrls\":[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"],\"links\":[{\"evidence\":\"Lubricant datasheet\",\"kind\":\"supports\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"Higher viscosity at night temperatures would raise motor current.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"contradicts\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"The relay setting was not changed, so it cannot explain new trips.\"},{\"evidence\":\"Lubricant datasheet\",\"kind\":\"consistent-with\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"Viscosity data fits a lower setting too, but does not favour it.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"inconclusive\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"The relay record neither confirms nor rules out a load increase.\"}],\"conclusions\":[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]}"
+    },
+    {
+      "obligation": "INV-037/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "{\"title\":\"Pump P-101 trips (2026-11-04T01:34:56.713Z)\",\"statement\":\"Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.\",\"question\":\"Why does P-101 trip only on the night shift?\",\"observations\":[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"],\"observationSources\":[\"SCADA trip log, line 2\",\"Building management export\"],\"hypotheses\":[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"],\"explanations\":[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"],\"evidence\":[\"Lubricant datasheet\",\"Relay settings record\"],\"evidenceContent\":[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"],\"evidenceSources\":[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"],\"evidenceUrls\":[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"],\"links\":[{\"evidence\":\"Lubricant datasheet\",\"kind\":\"supports\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"Higher viscosity at night temperatures would raise motor current.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"contradicts\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"The relay setting was not changed, so it cannot explain new trips.\"},{\"evidence\":\"Lubricant datasheet\",\"kind\":\"consistent-with\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"Viscosity data fits a lower setting too, but does not favour it.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"inconclusive\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"The relay record neither confirms nor rules out a load increase.\"}],\"conclusions\":[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]}",
+      "observed": "{\"title\":\"Pump P-101 trips (2026-11-04T01:34:56.713Z)\",\"statement\":\"Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.\",\"question\":\"Why does P-101 trip only on the night shift?\",\"observations\":[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"],\"observationSources\":[\"SCADA trip log, line 2\",\"Building management export\"],\"hypotheses\":[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"],\"explanations\":[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"],\"evidence\":[\"Lubricant datasheet\",\"Relay settings record\"],\"evidenceContent\":[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"],\"evidenceSources\":[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"],\"evidenceUrls\":[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"],\"links\":[{\"evidence\":\"Lubricant datasheet\",\"kind\":\"supports\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"Higher viscosity at night temperatures would raise motor current.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"contradicts\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"The relay setting was not changed, so it cannot explain new trips.\"},{\"evidence\":\"Lubricant datasheet\",\"kind\":\"consistent-with\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"Viscosity data fits a lower setting too, but does not favour it.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"inconclusive\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"The relay record neither confirms nor rules out a load increase.\"}],\"conclusions\":[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]}"
+    },
+    {
+      "obligation": "INV-037/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "{\"title\":\"Pump P-101 trips (2026-11-04T01:34:56.713Z)\",\"statement\":\"Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.\",\"question\":\"Why does P-101 trip only on the night shift?\",\"observations\":[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"],\"observationSources\":[\"SCADA trip log, line 2\",\"Building management export\"],\"hypotheses\":[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"],\"explanations\":[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"],\"evidence\":[\"Lubricant datasheet\",\"Relay settings record\"],\"evidenceContent\":[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"],\"evidenceSources\":[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"],\"evidenceUrls\":[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"],\"links\":[{\"evidence\":\"Lubricant datasheet\",\"kind\":\"supports\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"Higher viscosity at night temperatures would raise motor current.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"contradicts\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"The relay setting was not changed, so it cannot explain new trips.\"},{\"evidence\":\"Lubricant datasheet\",\"kind\":\"consistent-with\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"Viscosity data fits a lower setting too, but does not favour it.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"inconclusive\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"The relay record neither confirms nor rules out a load increase.\"}],\"conclusions\":[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]}",
+      "observed": "{\"title\":\"Pump P-101 trips (2026-11-04T01:34:56.713Z)\",\"statement\":\"Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.\",\"question\":\"Why does P-101 trip only on the night shift?\",\"observations\":[\"Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.\",\"Night-shift ambient temperature in the pump room fell to 4 °C.\"],\"observationSources\":[\"SCADA trip log, line 2\",\"Building management export\"],\"hypotheses\":[\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"The overcurrent relay setting was lowered during the last maintenance.\"],\"explanations\":[\"Explains why trips cluster when the room is cold.\",\"Explains trips that began after maintenance.\"],\"evidence\":[\"Lubricant datasheet\",\"Relay settings record\"],\"evidenceContent\":[\"Viscosity at 5 °C is 2.4x the value at 25 °C.\",\"Overcurrent pickup unchanged at 42 A since commissioning.\"],\"evidenceSources\":[\"Supplier datasheet rev C\",\"Maintenance record MR-2291\"],\"evidenceUrls\":[\"https://example.com/datasheets/lube-46.pdf\",\"https://example.com/records/MR-2291\"],\"links\":[{\"evidence\":\"Lubricant datasheet\",\"kind\":\"supports\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"Higher viscosity at night temperatures would raise motor current.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"contradicts\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"The relay setting was not changed, so it cannot explain new trips.\"},{\"evidence\":\"Lubricant datasheet\",\"kind\":\"consistent-with\",\"hypothesis\":\"The overcurrent relay setting was lowered during the last maintenance.\",\"rationale\":\"Viscosity data fits a lower setting too, but does not favour it.\"},{\"evidence\":\"Relay settings record\",\"kind\":\"inconclusive\",\"hypothesis\":\"Cold, viscous lubricant raises motor load past the overcurrent setting.\",\"rationale\":\"The relay record neither confirms nor rules out a load increase.\"}],\"conclusions\":[\"Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out.\"]}"
+    },
+    {
+      "obligation": "INV-034/V3/activate",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "details editor open",
+      "observed": "details editor open",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Edit investigation details",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-034/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)|What raises P-101's motor current on cold nights?|83e70618-d442-4cd5-83db-46d9f0ff1085",
+      "observed": "Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)|What raises P-101's motor current on cold nights?|83e70618-d442-4cd5-83db-46d9f0ff1085"
+    },
+    {
+      "obligation": "INV-035/V4/outcome",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "same id f2a5ccff-23ad-4cd0-8f40-460c5dc19a78; earlier text kept",
+      "observed": "same id f2a5ccff-23ad-4cd0-8f40-460c5dc19a78; earlier text kept"
+    },
+    {
+      "obligation": "INV-034/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)|What raises P-101's motor current on cold nights?|83e70618-d442-4cd5-83db-46d9f0ff1085",
+      "observed": "Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)|What raises P-101's motor current on cold nights?|83e70618-d442-4cd5-83db-46d9f0ff1085"
+    },
+    {
+      "obligation": "INV-035/V5/save",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "f2a5ccff-23ad-4cd0-8f40-460c5dc19a78|Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05 (three trips).",
+      "observed": "f2a5ccff-23ad-4cd0-8f40-460c5dc19a78|Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05 (three trips)."
+    },
+    {
+      "obligation": "INV-023/V5/update",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "What raises P-101's motor current on cold nights?",
+      "observed": "What raises P-101's motor current on cold nights?"
+    },
+    {
+      "obligation": "INV-024/V5/update",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05 (three trips).",
+      "observed": "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05 (three trips)."
+    },
+    {
+      "obligation": "INV-026/V5/update",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Cold, viscous lubricant raises motor load above the 42 A overcurrent pickup.",
+      "observed": "Cold, viscous lubricant raises motor load above the 42 A overcurrent pickup."
+    },
+    {
+      "obligation": "INV-027/V5/update",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Lubricant datasheet (rev C)",
+      "observed": "Lubricant datasheet (rev C)"
+    },
+    {
+      "obligation": "INV-030/V5/update",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "supports|Reassessed: the relay record alone cannot settle the load question.",
+      "observed": "supports|Reassessed: the relay record alone cannot settle the load question."
+    },
+    {
+      "obligation": "INV-034/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)|What raises P-101's motor current on cold nights?",
+      "observed": "Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)|What raises P-101's motor current on cold nights?"
+    },
+    {
+      "obligation": "INV-034/V5/update",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)|Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+      "observed": "Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)|Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes."
+    },
+    {
+      "obligation": "INV-035/V5/reload",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "f2a5ccff-23ad-4cd0-8f40-460c5dc19a78|earlier text in history",
+      "observed": "f2a5ccff-23ad-4cd0-8f40-460c5dc19a78|earlier text in history"
+    },
+    {
+      "obligation": "INV-035/V5/update",
+      "test": "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+      "expected": "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05 (three trips).|Cold, viscous lubricant raises motor load above the 42 A overcurrent pickup.|Lubricant datasheet (rev C)|Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)",
+      "observed": "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05 (three trips).|Cold, viscous lubricant raises motor load above the 42 A overcurrent pickup.|Lubricant datasheet (rev C)|Pump P-101 night-shift trips (2026-11-04T01:34:56.713Z)"
+    }
+  ]
+}

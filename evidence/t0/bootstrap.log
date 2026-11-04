@@ -1,0 +1,22 @@
+bootstrap: 177 of 178 files written onto the Conditor repository . (merged: .gitignore, package.json)
+PASS X01  Every file has exactly one owner, and the owner is a declared role
+PASS X02  Project files, the solution, composition, shared configuration, dependency manifests, CI and deployment are owned by integration
+PASS X03  Compile order is predefined: each file depends only on earlier files of its project or on referenced projects, project references (source and test) are acyclic, and every test file is in a declared test project
+PASS X04  Every interface has a complete contract implemented by one file its producer owns, in file order; its producer tests are in files the producer owns and every consumer has a contract test in a file it owns
+PASS X05  Each state machine's states and events are exactly the cases of the state and input unions of one interface (no new state, no unmapped event)
+PASS X06  The GitHub error matrix covers every required class and timeouts; a shared HTTP status is never the only evidence and no two such classes share evidence; each class retries within its own bound; every test exists in the plan and belongs to the class's requirements
+PASS X07  The Forma layout contract uses only custom properties, classes, patterns and breakpoints of the published Forma release, names no colour literal without a requirement source, and the committed inventory equals the one extracted from the package
+PASS X08  Coordination telemetry defines every required metric with a source, keeps textual conflicts apart from semantic failures, and records an unavailable metric as null with a reason, never inferred
+PASS X09  The verification execution plan places every (obligation, test) binding of the plan, and every contract, state-machine and unit test, in exactly one suite, keeping each test and its assertions
+PASS X10  Every requirement, P0 obligation and test binding of v4 is preserved unchanged
+PASS X11  No v4.1 input or document imports or names application source from an earlier rehearsal (Rehearsals 1-6)
+PASS X12  Every state machine is deterministic by reviewed guard partitions, every pair is decided (listed or fail-closed), every transition is sourced, every state is reachable, no state is added, and every transition v4.1 adds to v4 names an owner decision and approval
+PASS X13  The adjusted DAG is acyclic, keeps every v4 task with its requirements and every v4 ordering not explicitly waived, keeps every estimate at least half of v4's, and labels every change an estimate with a rationale
+PASS X14  Every test identity (plan, contract, state-machine, unit) names an owned test file, or is a Praxis record that is not code
+PASS X15  Every critical Forma layout rule has executable browser assertions, each exported by the layout kit with a broken fixture that must fail, run against published Forma patterns at contract viewports; every Forma gap has a remedy that uses only Forma tokens
+PASS X16  The test tooling is a well-formed owner lock: each lock names a dependency-lock decision and its approval, each entry is an exact id@version, no scoped npm name is in the NuGet list, no package is locked twice, and the NuGet packages go to exactly the test projects that host .NET tests (the offline suite compares each lock, and each package's manager, with the owner's record)
+PASS X17  The interface contracts are specifications: types and signatures only, except reviewed boundary code each allowlist entry names with its rationale and requirements; the compile control and negative controls are classified
+PASS X18  The shared web entrypoints are integration's alone; a UI role changes one only through a change request that integration owns and applies; the ownership manifest and the agent rules agree
+PASS X19  The bootstrap is the first timed task (T0), its duration partly measured and labelled so, every other timed task follows it, every organizer gate the scan finds has a recorded disposition under an owner decision, and the starting-state policy quotes the published rules verbatim, keeps the historical records unchanged and states the residual risk
+PASS X20  The amendment names the package it amends by the approved manifest digest and approval, its version succeeds 4.1.0, and every change is classified
+v4.1.2 validation: PASS; status: CANDIDATE

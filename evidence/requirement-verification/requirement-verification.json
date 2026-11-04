@@ -1,0 +1,3278 @@
+{
+  "schema": "dokimos.requirement-verification/1",
+  "manifest": {
+    "catalogId": "CAT-CAUSA-INVESTIGATION",
+    "contentHash": "63936e8fab4692b0007490239079f0a2b5f56884d24fc8ee1bff0dfecdface21",
+    "sourceCommit": "bc3c381df2840187a46799ea59f425ffe1b1ceed",
+    "intact": true
+  },
+  "candidate": "33d072da798a4ec762f15cebfc3c205c9014bbbd",
+  "runId": "41754817534-live",
+  "screens": [],
+  "requirementScope": [],
+  "summary": {
+    "applicable": 37,
+    "implemented": 36,
+    "verified": 36,
+    "failed": 1,
+    "blocked": 0,
+    "notRun": 0,
+    "notApplicable": 1,
+    "verifiedPercent": 97.2
+  },
+  "acceptance": {
+    "accepted": true,
+    "evidenceProblems": [],
+    "blockers": []
+  },
+  "requirements": [
+    {
+      "id": "INV-001",
+      "type": "ui-field",
+      "screen": "investigation-start",
+      "name": "Problem statement",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-001/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-001\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-001/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-001/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-001/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-001/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-001/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-001/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-002",
+      "type": "ui-field",
+      "screen": "investigation-start",
+      "name": "Title",
+      "required": false,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-002/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-002\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-002/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-002/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-002/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-002/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-002/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-002/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-003",
+      "type": "ui-control",
+      "screen": "investigation-start",
+      "name": "Domain or profile indicator",
+      "required": true,
+      "status": "NOT_APPLICABLE",
+      "failureClass": null,
+      "implemented": false,
+      "obligations": [
+        {
+          "id": "INV-003/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "NOT_APPLICABLE",
+          "reason": "a declared applicability fact has another value",
+          "tests": []
+        },
+        {
+          "id": "INV-003/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "NOT_APPLICABLE",
+          "reason": "a declared applicability fact has another value",
+          "tests": []
+        },
+        {
+          "id": "INV-003/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "NOT_APPLICABLE",
+          "reason": "a declared applicability fact has another value",
+          "tests": []
+        }
+      ]
+    },
+    {
+      "id": "INV-004",
+      "type": "action",
+      "screen": "investigation-start",
+      "name": "Start investigation",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-004/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-004\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-004/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-004/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-004/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-004/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-004/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-005",
+      "type": "ui-control",
+      "screen": "investigation-start",
+      "name": "Persistence destination indicator",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-005/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-005\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-005/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-005/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-005/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-006",
+      "type": "ui-field",
+      "screen": "investigation-start",
+      "name": "Investigation identifier",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-006/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-006\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-006/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-006/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-006/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-006/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-006/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-006/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        },
+        {
+          "id": "INV-006/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-007",
+      "type": "ui-control",
+      "screen": "investigation-workspace",
+      "name": "Creation timestamp",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-007/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-007\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-007/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-007/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-008",
+      "type": "ui-control",
+      "screen": "investigation-workspace",
+      "name": "Original problem statement",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-008/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-008\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-008/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-008/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-008/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-008/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-009",
+      "type": "action",
+      "screen": "investigation-workspace",
+      "name": "Record a hypothesis",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-009/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-009\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-009/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-009/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-009/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-009/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-009/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-010",
+      "type": "ui-control",
+      "screen": "investigation-workspace",
+      "name": "Hypotheses",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-010/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-010\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-010/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-010/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-010/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-011",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Hypothesis explanation",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-011/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-011\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-011/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-011/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-011/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-011/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-011/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-012",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Evidence original content",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-012/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-012\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-012/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-012/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-012/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-012/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-012/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-013",
+      "type": "ui-control",
+      "screen": "investigation-workspace",
+      "name": "Evidence",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-013/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-013\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-013/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-013/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-014",
+      "type": "action",
+      "screen": "investigation-workspace",
+      "name": "Record an observation",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-014/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-014\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-014/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-014/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-014/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-014/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-014/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-015",
+      "type": "action",
+      "screen": "investigation-workspace",
+      "name": "Save",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-015/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-015\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-015/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-015/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-015/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-015/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-015/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-016",
+      "type": "ui-control",
+      "screen": "investigation-workspace",
+      "name": "Save state",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-016/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-016\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-016/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-016/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-016/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-017",
+      "type": "workflow-outcome",
+      "screen": "investigation-workspace",
+      "name": "Reopening restores the saved investigation",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-017/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-017\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-017/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-018",
+      "type": "ui-control",
+      "screen": "investigation-workspace",
+      "name": "Investigation state",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-018/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-018\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-018/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-018/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-018/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-019",
+      "type": "validation-rule",
+      "screen": "investigation-start",
+      "name": "Problem statement must not be empty",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-019/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-019\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-019/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        },
+        {
+          "id": "INV-019/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-020",
+      "type": "validation-rule",
+      "screen": "investigation-start",
+      "name": "Title length",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-020/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-020\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-020/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        },
+        {
+          "id": "INV-020/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-021",
+      "type": "validation-rule",
+      "screen": "investigation-start",
+      "name": "Problem statement length",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-021/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-021\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-021/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        },
+        {
+          "id": "INV-021/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-022",
+      "type": "action",
+      "screen": "investigation-start",
+      "name": "Cancel investigation start",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-022/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-022\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-022/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-022/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-022/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-022/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        },
+        {
+          "id": "INV-022/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-023",
+      "type": "ui-field",
+      "screen": "investigation-start",
+      "name": "Primary investigative question",
+      "required": false,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-023/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-023\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-023/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > start screen rules: identifier, problem statement, title, question; cancel writes nothing [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-023/V5/update",
+          "level": "V5",
+          "check": "update",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-024",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Observation text",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-024/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-024\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-024/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-024/V5/update",
+          "level": "V5",
+          "check": "update",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-025",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Observation source reference",
+      "required": false,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-025/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-025\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-025/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-025/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-025/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-025/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-025/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-025/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-025/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-025/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-025/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-026",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Hypothesis statement",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-026/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-026\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-026/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-026/V5/update",
+          "level": "V5",
+          "check": "update",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-027",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Evidence label",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-027/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-027\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-027/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-027/V5/update",
+          "level": "V5",
+          "check": "update",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-028",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Evidence source reference",
+      "required": false,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-028/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-028\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-028/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-028/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-028/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-028/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-028/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-028/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-028/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-028/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-028/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-029",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Evidence source URL",
+      "required": false,
+      "status": "FAIL",
+      "failureClass": "structural",
+      "implemented": false,
+      "obligations": [
+        {
+          "id": "INV-029/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-029\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-029/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": false,
+          "status": "FAIL",
+          "reason": "data-requirement-id=\"INV-029\" is on <input type=text>, which is not a url-input",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-029/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": false,
+          "status": "FAIL",
+          "reason": "data-requirement-id=\"INV-029\" is on <input type=text>, which is not a url-input",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-029/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": false,
+          "status": "FAIL",
+          "reason": "data-requirement-id=\"INV-029\" is on <input type=text>, which is not a url-input",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-029/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": false,
+          "status": "FAIL",
+          "reason": "data-requirement-id=\"INV-029\" is on <input type=text>, which is not a url-input",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-029/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": false,
+          "status": "FAIL",
+          "reason": "data-requirement-id=\"INV-029\" is on <input type=text>, which is not a url-input",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-029/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-029/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-029/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-029/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": false,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-030",
+      "type": "action",
+      "screen": "investigation-workspace",
+      "name": "Link evidence to a hypothesis",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-030/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-030\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-030/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-030/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-030/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-030/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-030/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-030/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-030/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-030/V5/update",
+          "level": "V5",
+          "check": "update",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-031",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Evidence relationship kind",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-031/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-031\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-031/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-031/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-031/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-031/V3/select",
+          "level": "V3",
+          "check": "select",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-031/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-031/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-031/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-031/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-032",
+      "type": "action",
+      "screen": "investigation-workspace",
+      "name": "Record a conclusion",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-032/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-032\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-032/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-032/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-032/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-032/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-032/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-032/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-032/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-033",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Conclusion statement",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-033/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-033\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-033/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-033/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-033/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-033/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-033/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-033/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-033/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-033/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-033/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-034",
+      "type": "action",
+      "screen": "investigation-workspace",
+      "name": "Edit investigation details",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-034/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-034\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-034/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-034/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-034/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-034/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-034/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-034/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-034/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-034/V5/update",
+          "level": "V5",
+          "check": "update",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-035",
+      "type": "workflow-outcome",
+      "screen": "investigation-workspace",
+      "name": "Editing keeps identity and history",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-035/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-035\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-035/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-035/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-035/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-035/V5/update",
+          "level": "V5",
+          "check": "update",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-036",
+      "type": "action",
+      "screen": "investigation-workspace",
+      "name": "Cancel a content editor",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-036/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-036\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-036/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-036/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-036/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-036/V3/activate",
+          "level": "V3",
+          "check": "activate",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-036/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-037",
+      "type": "workflow-outcome",
+      "screen": "investigation-workspace",
+      "name": "All content survives a reload from GitHub",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-037/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-037\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-037/V4/outcome",
+          "level": "V4",
+          "check": "outcome",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-037/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-037/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-037/V5/isolation",
+          "level": "V5",
+          "check": "isolation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INV-038",
+      "type": "ui-field",
+      "screen": "investigation-workspace",
+      "name": "Evidence relationship rationale",
+      "required": true,
+      "status": "PASS",
+      "failureClass": null,
+      "implemented": true,
+      "obligations": [
+        {
+          "id": "INV-038/V1/mapped",
+          "level": "V1",
+          "check": "mapped",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "web/index.html carries data-requirement-id=\"INV-038\"",
+          "tests": [
+            "dokimos:source-mapping"
+          ]
+        },
+        {
+          "id": "INV-038/V1/exists",
+          "level": "V1",
+          "check": "exists",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-038/V2/visible",
+          "level": "V2",
+          "check": "visible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-038/V2/accessible",
+          "level": "V2",
+          "check": "accessible",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium], playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 320 px: start, workspace and every editor [chromium]",
+            "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]"
+          ]
+        },
+        {
+          "id": "INV-038/V3/editable",
+          "level": "V3",
+          "check": "editable",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-038/V3/enter",
+          "level": "V3",
+          "check": "enter",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-038/V4/validation",
+          "level": "V4",
+          "check": "validation",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-038/V4/rejects",
+          "level": "V4",
+          "check": "rejects",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]",
+          "tests": [
+            "playwright:requirements/content-validation.spec.mjs > INVESTIGATION-CONTENT-NEGATIVE > workspace rules: observation, hypothesis, evidence, relationship, rationale, conclusion [chromium]"
+          ]
+        },
+        {
+          "id": "INV-038/V5/save",
+          "level": "V5",
+          "check": "save",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        },
+        {
+          "id": "INV-038/V5/reload",
+          "level": "V5",
+          "check": "reload",
+          "mandatory": true,
+          "status": "PASS",
+          "reason": "verified by playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]",
+          "tests": [
+            "playwright:requirements/content-e2e.spec.mjs > INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, edit and reload again [chromium]"
+          ]
+        }
+      ]
+    }
+  ]
+}
