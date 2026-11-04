@@ -1,0 +1,127 @@
+{
+  "schema": "causa.investigation/1",
+  "id": "f1ada034-fe02-469b-9689-c419ea86acff",
+  "events": [
+    {
+      "sequence": 1,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:08.5250000\u002B00:00",
+      "type": "started",
+      "id": "f1ada034-fe02-469b-9689-c419ea86acff",
+      "createdAt": "2026-11-04T01:53:08.5250000\u002B00:00",
+      "title": "Pump P-101 trips (2026-11-04T01:53:02.283Z)",
+      "problemStatement": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+      "question": "Why does P-101 trip only on the night shift?"
+    },
+    {
+      "sequence": 2,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:08.9550000\u002B00:00",
+      "type": "observation-recorded",
+      "id": "293806f0-e1d1-4cc4-9817-fead7fd105fb",
+      "text": "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05.",
+      "source": "SCADA trip log, line 2"
+    },
+    {
+      "sequence": 3,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:09.1380000\u002B00:00",
+      "type": "observation-recorded",
+      "id": "5798993a-2e79-4f40-a723-7b754b043a48",
+      "text": "Night-shift ambient temperature in the pump room fell to 4 \u00B0C.",
+      "source": "Building management export"
+    },
+    {
+      "sequence": 4,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:09.4720000\u002B00:00",
+      "type": "hypothesis-recorded",
+      "id": "97af9197-abba-4203-8e93-c696ae20537d",
+      "statement": "Cold, viscous lubricant raises motor load past the overcurrent setting.",
+      "explanation": "Explains why trips cluster when the room is cold."
+    },
+    {
+      "sequence": 5,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:09.6550000\u002B00:00",
+      "type": "hypothesis-recorded",
+      "id": "3220eab1-9326-44d9-b995-a4a66bd1bec2",
+      "statement": "The overcurrent relay setting was lowered during the last maintenance.",
+      "explanation": "Explains trips that began after maintenance."
+    },
+    {
+      "sequence": 6,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:09.9420000\u002B00:00",
+      "type": "evidence-admitted",
+      "id": "2ba571fe-d090-4c4f-a38f-bad41e09a649",
+      "label": "Lubricant datasheet",
+      "content": "Viscosity at 5 \u00B0C is 2.4x the value at 25 \u00B0C.",
+      "source": "Supplier datasheet rev C",
+      "url": "https://example.com/datasheets/lube-46.pdf"
+    },
+    {
+      "sequence": 7,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:10.1910000\u002B00:00",
+      "type": "evidence-admitted",
+      "id": "699ca80d-b37f-4a19-9241-f82d2adacc15",
+      "label": "Relay settings record",
+      "content": "Overcurrent pickup unchanged at 42 A since commissioning.",
+      "source": "Maintenance record MR-2291",
+      "url": "https://example.com/records/MR-2291"
+    },
+    {
+      "sequence": 8,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:10.6060000\u002B00:00",
+      "type": "relationship-recorded",
+      "id": "e27d639a-2fc9-4b61-97a9-74f6200f4ec5",
+      "evidenceId": "2ba571fe-d090-4c4f-a38f-bad41e09a649",
+      "hypothesisId": "97af9197-abba-4203-8e93-c696ae20537d",
+      "kind": "supports",
+      "rationale": "Higher viscosity at night temperatures would raise motor current."
+    },
+    {
+      "sequence": 9,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:10.8400000\u002B00:00",
+      "type": "relationship-recorded",
+      "id": "18d75775-2952-4846-a25f-c7c6eaa3515e",
+      "evidenceId": "699ca80d-b37f-4a19-9241-f82d2adacc15",
+      "hypothesisId": "3220eab1-9326-44d9-b995-a4a66bd1bec2",
+      "kind": "contradicts",
+      "rationale": "The relay setting was not changed, so it cannot explain new trips."
+    },
+    {
+      "sequence": 10,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:11.0570000\u002B00:00",
+      "type": "relationship-recorded",
+      "id": "c176a4a8-05d6-457f-8ff3-dd2481246c18",
+      "evidenceId": "2ba571fe-d090-4c4f-a38f-bad41e09a649",
+      "hypothesisId": "3220eab1-9326-44d9-b995-a4a66bd1bec2",
+      "kind": "consistent-with",
+      "rationale": "Viscosity data fits a lower setting too, but does not favour it."
+    },
+    {
+      "sequence": 11,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:11.2740000\u002B00:00",
+      "type": "relationship-recorded",
+      "id": "79af0d01-4e55-4f84-89a0-9e46f10805e8",
+      "evidenceId": "699ca80d-b37f-4a19-9241-f82d2adacc15",
+      "hypothesisId": "97af9197-abba-4203-8e93-c696ae20537d",
+      "kind": "inconclusive",
+      "rationale": "The relay record neither confirms nor rules out a load increase."
+    },
+    {
+      "sequence": 12,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:53:11.5530000\u002B00:00",
+      "type": "conclusion-recorded",
+      "id": "29b4e82e-f237-44d5-a57c-0e61301a5c71",
+      "statement": "Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out."
+    }
+  ]
+}
