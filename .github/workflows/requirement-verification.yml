@@ -1,0 +1,124 @@
+name: Requirement verification
+
+# Verifies Causa against CAT-CAUSA-INVESTIGATION (INV-001..038) with the released tools pinned for Rehearsal 009:
+# Praxis 3.25.0 compiles the manifest from the catalog at the pinned Indy-init commit (never from this
+# application), the browser probes drive the built site against the real GitHub repository (the live round trip
+# of INV-037, using this run's token on the causa-data branch), and Dokimos 0.11.0 alone decides each obligation.
+# The content fault probes then require the round trip to fail when wiring, projection, view or relationships
+# are faulted. Written for Rehearsal 009 from the tools' documentation; nothing is copied from earlier rehearsals.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Candidate is the checked-out commit
+        id: candidate
+        env:
+          CANDIDATE: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$CANDIDATE" || { echo "::error::checkout is not the candidate"; exit 1; }
+          echo "sha=$CANDIDATE" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Indy-init at the governing commit, and the pinned catalog
+        run: |
+          commit=$(jq -r .indyInitCommit .echelon/r9-governance.json)
+          pin=$(jq -r .commit requirements/verification/catalog-pin.json)
+          test "$commit" = "$pin" || { echo "::error::catalog pin $pin is not the governing Indy-init commit $commit"; exit 1; }
+          git init -q "$RUNNER_TEMP/indy-init"
+          git -C "$RUNNER_TEMP/indy-init" fetch -q --depth 1 https://github.com/kemiller2002/Indy-init "$commit"
+          git -C "$RUNNER_TEMP/indy-init" checkout -q FETCH_HEAD
+          catalog="$RUNNER_TEMP/indy-init/$(jq -r .catalog requirements/verification/catalog-pin.json)"
+          echo "$(jq -r .catalogSha256 requirements/verification/catalog-pin.json)  $catalog" | sha256sum -c -
+          echo "CATALOG=$catalog" >> "$GITHUB_ENV"
+      - name: Pinned toolchain (Conditor 0.10.20, then the echelon-current 1.36.0 resolved set)
+        run: |
+          lock="$RUNNER_TEMP/indy-init/kickoff/rehearsal-009/toolchain.lock.json"
+          dotnet fsi "$RUNNER_TEMP/indy-init/tools/r9/r9.fsx" -- install-conditor --lock "$lock" --dir "$RUNNER_TEMP/conditor"
+          dotnet fsi "$RUNNER_TEMP/indy-init/tools/r9/r9.fsx" -- workstation --lock "$lock" --conditor "$RUNNER_TEMP/conditor/conditor" --home "$RUNNER_TEMP/echelon" --target-id "ci-${{ github.run_id }}"
+          echo "$RUNNER_TEMP/echelon/.local/bin" >> "$GITHUB_PATH"
+      - name: Compile the manifest from the catalog (the committed manifest must equal it)
+        run: |
+          mkdir -p "$RUNNER_TEMP/rv"
+          praxis requirements manifest compile --catalog "$CATALOG" --source-commit "$(jq -r .commit requirements/verification/catalog-pin.json)" \
+            --mappings requirements/requirement-implementation-map.json --output "$RUNNER_TEMP/rv/verification-manifest.json"
+          cmp "$RUNNER_TEMP/rv/verification-manifest.json" requirements/verification/verification-manifest.json \
+            || { echo "::error::requirements/verification/verification-manifest.json is not what the pinned catalog compiles to"; exit 1; }
+      - name: Install npm dependencies and Chromium
+        timeout-minutes: 10
+        run: |
+          npm ci
+          npx playwright install chromium
+      - name: Build the site
+        run: npm run build
+      - name: Browser probes against the real GitHub repository (live)
+        env:
+          CAUSA_GITHUB_TOKEN: ${{ github.token }}
+          CAUSA_GITHUB_OWNER: ${{ github.repository_owner }}
+          CAUSA_GITHUB_REPOSITORY: ${{ github.event.repository.name }}
+          CAUSA_GITHUB_BRANCH: causa-data
+          CAUSA_RUN_ID: ${{ github.run_id }}-live
+          CAUSA_CANDIDATE: ${{ steps.candidate.outputs.sha }}
+          CAUSA_OBSERVATIONS: ${{ runner.temp }}/rv/live/requirement-observations
+          CAUSA_PLAYWRIGHT_JSON: ${{ runner.temp }}/rv/live/playwright.json
+        run: npx playwright test || echo "PLAYWRIGHT_LIVE_FAILED=1" >> "$GITHUB_ENV"
+      - name: Negative, conclusion and mobile scenarios against the GitHub double (fault injection)
+        env:
+          CAUSA_RUN_ID: ${{ github.run_id }}-double
+          CAUSA_CANDIDATE: ${{ steps.candidate.outputs.sha }}
+          CAUSA_OBSERVATIONS: ${{ runner.temp }}/rv/double/requirement-observations
+          CAUSA_PLAYWRIGHT_JSON: ${{ runner.temp }}/rv/double/playwright.json
+        run: npx playwright test tests/browser/scenarios tests/browser/requirements/content-mobile.spec.mjs || echo "PLAYWRIGHT_DOUBLE_FAILED=1" >> "$GITHUB_ENV"
+      - name: Dokimos verdict (live run)
+        id: verdict
+        run: |
+          set +e
+          dokimos verification requirements --manifest requirements/verification/verification-manifest.json \
+            --observations "$RUNNER_TEMP/rv/live/requirement-observations" --results "$RUNNER_TEMP/rv/live/playwright.json" \
+            --root . --candidate "${{ steps.candidate.outputs.sha }}" --out "$RUNNER_TEMP/rv/requirement-verification.json"
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          jq .summary "$RUNNER_TEMP/rv/requirement-verification.json"
+      - name: Content fault probes (the round trip must detect wiring, projection, view and relationship faults)
+        id: probes
+        run: |
+          set +e
+          dokimos verification probe --spec .echelon/fault-probes.json --sha "${{ steps.candidate.outputs.sha }}" --root . \
+            --out "$RUNNER_TEMP/rv/fault-probe-results.json"
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          jq -c '.probes[] | {id, outcome: (.outcome // .status // .result)}' "$RUNNER_TEMP/rv/fault-probe-results.json" || true
+      - name: Publish the verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: requirement-verification-${{ steps.candidate.outputs.sha }}
+          path: ${{ runner.temp }}/rv
+      - name: Accept only a complete verification
+        run: |
+          fail=0
+          [ "${{ steps.verdict.outputs.exit }}" = "0" ] || { echo "::error::Dokimos did not accept the requirements (exit ${{ steps.verdict.outputs.exit }})"; fail=1; }
+          [ "${{ steps.probes.outputs.exit }}" = "0" ] || { echo "::error::a content fault probe was not detected or errored (exit ${{ steps.probes.outputs.exit }})"; fail=1; }
+          [ -z "${PLAYWRIGHT_LIVE_FAILED:-}" ] || { echo "::error::a live browser test failed"; fail=1; }
+          [ -z "${PLAYWRIGHT_DOUBLE_FAILED:-}" ] || { echo "::error::a negative, conclusion or mobile scenario failed"; fail=1; }
+          exit $fail

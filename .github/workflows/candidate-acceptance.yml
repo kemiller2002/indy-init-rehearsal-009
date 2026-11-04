@@ -68,12 +68,14 @@ jobs:
         with:
           node-version: "22"
       - name: Build
-        run: dotnet build App.slnx -c Release
+        run: |
+          dotnet build App.slnx -c Release
+          dotnet build Causa.slnx -c Release
       - name: Test
         shell: bash
         run: |
           set -uo pipefail
-          output=$(dotnet test App.slnx -c Release --no-build 2>&1)
+          output=$(dotnet test App.slnx -c Release --no-build 2>&1 && dotnet test Causa.slnx -c Release --no-build 2>&1)
           status=$?
           echo "$output"
           if [ "$status" -ne 0 ]; then exit "$status"; fi
@@ -154,7 +156,9 @@ jobs:
           echo "Every shared library Chromium links against is present."
 
       - name: Verify the pages in a real browser
-        run: npx playwright test
+        run: |
+          npm run build
+          npx playwright test
 
       - name: Record the verified candidate
         env:
