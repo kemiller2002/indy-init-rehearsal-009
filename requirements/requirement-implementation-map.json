@@ -1,0 +1,153 @@
+{
+  "schema": "praxis.requirement-implementation-map/1",
+  "mappings": [
+    {
+      "requirement": "INV-001",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-002",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-004",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-005",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-006",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-007",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-008",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-009",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-010",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-011",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-012",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-013",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-014",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-015",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-016",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-017",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-018",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-019",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-020",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-021",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-022",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-023",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-024",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-025",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-026",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-027",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-028",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-029",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-030",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-031",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-032",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-033",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-034",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-035",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-036",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-037",
+      "location": "web/index.html"
+    },
+    {
+      "requirement": "INV-038",
+      "location": "web/index.html"
+    }
+  ]
+}

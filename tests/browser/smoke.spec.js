@@ -1,26 +1,21 @@
-// Scaffold smoke suite: every page loads every resource it references and
-// raises no script error. Extend it with the application's real journeys.
+// Smoke: the built site loads every resource it references, starts the WebAssembly engine and raises no error.
 import { expect, test } from "@playwright/test";
 
-const pages = ["src/kernel/index.html", "src/kernel/print.html"];
-
-for (const path of pages) {
-  test(`${path} loads every resource it references`, async ({ page }) => {
-    const failures = [];
-    page.on("response", (response) => {
-      if (response.status() >= 400) failures.push(`${response.status()} ${response.url()}`);
-    });
-    page.on("requestfailed", (request) => failures.push(`failed ${request.url()}`));
-    page.on("pageerror", (error) => failures.push(`script error: ${error.message}`));
-
-    await page.goto(`/${path}`);
-    await page.waitForLoadState("networkidle");
-
-    expect(failures).toEqual([]);
+test("the Causa page loads every resource and starts its engine", async ({ page }) => {
+  const failures = [];
+  page.on("response", (response) => {
+    if (response.status() >= 400) failures.push(`${response.status()} ${response.url()}`);
   });
-}
+  page.on("requestfailed", (request) => failures.push(`failed ${request.url()}`));
+  page.on("pageerror", (error) => failures.push(`script error: ${error.message}`));
+  page.on("console", (message) => {
+    if (message.type() === "error") failures.push(`console error: ${message.text()}`);
+  });
 
-test("the application page renders its first control", async ({ page }) => {
-  await page.goto("/src/kernel/index.html");
-  await expect(page.getByRole("button", { name: "Ready" })).toBeVisible();
+  await page.goto("/index.html");
+  await page.waitForFunction(() => document.documentElement.dataset.causaReady, null, { timeout: 45_000 });
+
+  expect(await page.evaluate(() => document.documentElement.dataset.causaReady)).toBe("running");
+  await expect(page.getByRole("heading", { name: "Connect to GitHub" })).toBeVisible();
+  expect(failures).toEqual([]);
 });

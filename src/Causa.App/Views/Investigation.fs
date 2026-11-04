@@ -162,7 +162,8 @@ module Projection =
             @ ([ "observations"; "hypotheses"; "evidence"; "relationships"; "conclusions"; "history"; "evidenceOptions"; "hypothesisOptions" ]
                |> List.map (fun k -> View.items k []))
             @ [ View.flag "hasObservations" false; View.flag "hasHypotheses" false; View.flag "hasEvidence" false
-                View.flag "hasRelationships" false; View.flag "hasConclusions" false; View.flag "canLink" false ]
+                View.flag "hasRelationships" false; View.flag "hasConclusions" false; View.flag "canLink" false
+                View.flag "noObservations" false; View.flag "noHypotheses" false; View.flag "noEvidence" false; View.flag "noConclusions" false ]
         | Some s ->
             let inv = s.Investigation
             let evidenceLabel id = inv.Evidence |> List.tryFind (fun e -> e.Id = id) |> Option.map (fun e -> e.Label) |> Option.defaultValue "(missing)"
@@ -192,6 +193,10 @@ module Projection =
               View.flag "isConflict" (code = "conflict")
               View.items "observations" (inv.Observations |> List.map (fun o -> [ "id", Text o.Id; "text", Text o.Text; "source", Text o.Source; "hasSource", Flag(o.Source <> "") ]))
               View.flag "hasObservations" (not inv.Observations.IsEmpty)
+              View.flag "noObservations" inv.Observations.IsEmpty
+              View.flag "noHypotheses" inv.Hypotheses.IsEmpty
+              View.flag "noEvidence" inv.Evidence.IsEmpty
+              View.flag "noConclusions" inv.Conclusions.IsEmpty
               View.items
                   "hypotheses"
                   (inv.Hypotheses

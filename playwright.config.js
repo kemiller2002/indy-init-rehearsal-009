@@ -1,17 +1,12 @@
-// Real-browser checks for the application pages.
-//
-// The .NET tests prove the engine decides correctly; they cannot prove a page
-// loads. These tests serve the repository root (the pages reach into
-// node_modules/ for Forma and Folio) and drive the pages in Chromium.
+// Real-browser suites for Causa. They drive the built site (dist/, written by `npm run build`) in Chromium.
+// GitHub is the real repository when CAUSA_GITHUB_TOKEN is set (live), otherwise the stateful Contents API double
+// in tests/browser/support/github.mjs. The JSON report feeds `dokimos verification requirements`.
 import { existsSync } from "node:fs";
 import { defineConfig, devices } from "@playwright/test";
 
 const port = 4321;
 const origin = `http://127.0.0.1:${port}`;
 
-// Some environments ship a Chromium that Playwright did not download itself.
-// Where that binary exists it is used as-is; everywhere else Playwright
-// resolves its own, so CI needs no special case.
 const preinstalledChromium = "/opt/pw-browsers/chromium";
 const launchOptions = existsSync(preinstalledChromium) ? { executablePath: preinstalledChromium } : {};
 
@@ -21,13 +16,14 @@ export default defineConfig({
   workers: 1,
   forbidOnly: !!process.env.CI,
   retries: 0,
-  timeout: 60_000,
-  reporter: process.env.CI ? [["github"], ["list"]] : [["list"]],
+  timeout: 240_000,
+  expect: { timeout: 15_000 },
+  reporter: [["list"], ["json", { outputFile: process.env.CAUSA_PLAYWRIGHT_JSON ?? "test-evidence/playwright.json" }]],
   use: { baseURL: origin, trace: "retain-on-failure" },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"], launchOptions } }],
   webServer: {
-    command: `python3 -m http.server ${port} --bind 127.0.0.1`,
-    url: `${origin}/src/kernel/index.html`,
+    command: `python3 -m http.server ${port} --bind 127.0.0.1 --directory dist`,
+    url: `${origin}/index.html`,
     reuseExistingServer: !process.env.CI,
     timeout: 60_000
   }

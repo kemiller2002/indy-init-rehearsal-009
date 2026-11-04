@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Causa — investigations</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./vendor/forma/all.css">
   <link rel="stylesheet" href="./causa.css">
   <script type="importmap">{ "imports": { "@echelon-foundry/limen": "./vendor/limen/index.js" } }</script>
@@ -145,6 +146,7 @@
 
             <section class="causa-card" aria-labelledby="obs-heading">
               <h2 id="obs-heading">Observations</h2>
+              <template data-if="noObservations"><p class="causa-help">No observations recorded yet.</p></template>
               <ul class="causa-list" aria-label="Observations">
                 <template data-each="observations" data-key="id">
                   <li class="causa-item" data-testid="observation" data-bind-data-id="id">
@@ -172,7 +174,9 @@
 
             <section class="causa-card" aria-labelledby="hyp-heading">
               <h2 id="hyp-heading">Hypotheses</h2>
-              <ul class="causa-list" aria-label="Hypotheses" data-requirement-id="INV-010">
+              <div class="causa-collection" role="region" aria-label="Hypotheses" data-requirement-id="INV-010">
+              <template data-if="noHypotheses"><p class="causa-help">No hypotheses recorded yet.</p></template>
+              <ul class="causa-list" aria-label="Hypotheses list">
                 <template data-each="hypotheses" data-key="id">
                   <li class="causa-item causa-hypothesis" data-testid="hypothesis" data-bind-data-id="id">
                     <p class="causa-kind">Hypothesis</p>
@@ -183,6 +187,7 @@
                   </li>
                 </template>
               </ul>
+              </div>
               <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-009" data-event="newHypothesis" aria-controls="causa-editor">Record a hypothesis</button></div></template>
               <template data-if="editingHypothesis">
                 <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="hyp-editor-heading">
@@ -200,7 +205,9 @@
 
             <section class="causa-card" aria-labelledby="ev-heading">
               <h2 id="ev-heading">Evidence</h2>
-              <ul class="causa-list" aria-label="Evidence" data-requirement-id="INV-013">
+              <div class="causa-collection" role="region" aria-label="Evidence" data-requirement-id="INV-013">
+              <template data-if="noEvidence"><p class="causa-help">No evidence recorded yet.</p></template>
+              <ul class="causa-list" aria-label="Evidence list">
                 <template data-each="evidence" data-key="id">
                   <li class="causa-item" data-testid="evidence" data-bind-data-id="id">
                     <p class="causa-prose causa-strong" data-testid="evidence-label" data-text="label"></p>
@@ -212,6 +219,7 @@
                   </li>
                 </template>
               </ul>
+              </div>
               <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-event="newEvidence" aria-controls="causa-editor">Record evidence</button></div></template>
               <template data-if="editingEvidence">
                 <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="ev-editor-heading">
@@ -298,6 +306,7 @@
             <section class="causa-card" aria-labelledby="con-heading">
               <h2 id="con-heading">Conclusions</h2>
               <p class="causa-help">A conclusion records what the investigation concludes so far. It does not resolve the investigation.</p>
+              <template data-if="noConclusions"><p class="causa-help">No conclusions recorded yet.</p></template>
               <ul class="causa-list" aria-label="Conclusions">
                 <template data-each="conclusions" data-key="id">
                   <li class="causa-item" data-testid="conclusion" data-bind-data-id="id">
