@@ -17,7 +17,8 @@
       <a href="#/">Investigations</a>
       <button type="button" class="ef-button" data-event="newInvestigation">New investigation</button>
     </nav>
-    <p class="causa-connection" data-text="connectionStatus">Loading…</p>
+    <p class="causa-connection"><span data-text="connectionStatus">Loading…</span>
+      <template data-if="connected"><button type="button" class="ef-button causa-secondary causa-inline" data-event="disconnect">Disconnect</button></template></p>
   </header>
 
   <main id="main" class="causa-main" tabindex="-1">
@@ -118,6 +119,7 @@
               <div class="causa-savebar">
                 <p class="causa-save" role="status" aria-label="Save state" aria-live="polite" data-requirement-id="INV-016" data-bind-data-state="saveCode" data-text="saveState"></p>
                 <button type="button" class="ef-button" data-requirement-id="INV-015" data-event="save" data-bind-disabled="saveDisabled">Save</button>
+                <template data-if="canRetry"><button type="button" class="ef-button causa-secondary" data-event="retrySave">Retry save</button></template>
                 <template data-if="isConflict"><button type="button" class="ef-button causa-secondary" data-event="reloadSaved">Discard my changes and load the saved copy</button></template>
               </div>
               <div class="causa-actions">
@@ -233,7 +235,7 @@
                     <input id="ev-source" data-requirement-id="INV-028" data-bind-data-requirement-instance="editorInstance" data-event="draft:evidenceSource" data-on="input" data-bind-value="draft_evidenceSource" data-bind-aria-invalid="invalid_evidenceSource" aria-describedby="ev-source-error">
                     <template data-if="hasError_evidenceSource"><p id="ev-source-error" class="causa-error" role="alert" data-text="error_evidenceSource"></p></template></div>
                   <div class="ef-field"><label for="ev-url">Source URL (optional)</label>
-                    <input id="ev-url" type="url" inputmode="url" data-requirement-id="INV-029" data-bind-data-requirement-instance="editorInstance" data-event="draft:evidenceUrl" data-on="input" data-bind-value="draft_evidenceUrl" data-bind-aria-invalid="invalid_evidenceUrl" aria-describedby="ev-url-error">
+                    <input id="ev-url" type="text" inputmode="url" autocomplete="url" data-requirement-id="INV-029" data-bind-data-requirement-instance="editorInstance" data-event="draft:evidenceUrl" data-on="input" data-bind-value="draft_evidenceUrl" data-bind-aria-invalid="invalid_evidenceUrl" aria-describedby="ev-url-error">
                     <template data-if="hasError_evidenceUrl"><p id="ev-url-error" class="causa-error" role="alert" data-text="error_evidenceUrl"></p></template></div>
                   <div class="causa-actions"><button type="submit" class="ef-button">Record evidence</button>
                     <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-036" data-bind-data-requirement-instance="editorName" data-event="cancelEditor">Cancel</button></div>

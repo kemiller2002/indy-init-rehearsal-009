@@ -336,7 +336,8 @@ module Update =
                         Notice = "Investigation loaded from GitHub." }, []
                 | Error reason -> { model with Load = LoadFailed(id, $"The saved investigation could not be read: {reason}. Nothing was loaded.") }, []
             | LoadInvestigation id, NotFound -> { model with Load = LoadFailed(id, "No saved investigation has this identifier.") }, []
-            | LoadInvestigation id, (AuthenticationFailed m | ConflictDetected m | Unavailable m) -> { model with Load = LoadFailed(id, m) }, []
+            | LoadInvestigation id, AuthenticationFailed m -> { model with Load = LoadFailed(id, m); Connection = ConnectFailed $"{m} Reconnect to load the investigation." }, []
+            | LoadInvestigation id, (ConflictDetected m | Unavailable m) -> { model with Load = LoadFailed(id, m) }, []
             | SaveInvestigation(id, length), result ->
                 match model.Session with
                 | Some session when session.Investigation.Id = id ->
@@ -355,8 +356,14 @@ module Update =
                         | IndexLoaded ids, Succeeded _ when not (List.contains id ids) -> IndexLoaded(ids @ [ id ])
                         | other, _ -> other
 
+                    let connection =
+                        match result with
+                        | AuthenticationFailed m -> ConnectFailed $"{m} Reconnect, then select Save again."
+                        | _ -> model.Connection
+
                     { model with
                         Session = Some { session with Save = state; Sha = (match sha with Some s -> Some s | None -> session.Sha); SavedLength = savedLength }
+                        Connection = connection
                         Index = indexed
                         Notice = notice }, []
                 | _ -> model, []
