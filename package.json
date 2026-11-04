@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "check": "tsc --noEmit",
-    "test:browser": "playwright test"
+    "test:browser": "playwright test",
+    "build": "dotnet fsi build.fsx"
   },
   "dependencies": {
     "@echelon-foundry/design-system": "0.13.0",

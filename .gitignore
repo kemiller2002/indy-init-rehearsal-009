@@ -46,3 +46,4 @@ playwright-report/
 # conditor:build-outputs:end
 # requirements-compiler v41 (v4.1.1 bootstrap)
 *.trx
+artifacts/
