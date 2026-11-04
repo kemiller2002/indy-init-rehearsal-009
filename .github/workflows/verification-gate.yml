@@ -1,0 +1,144 @@
+# Rehearsal 009 verification gate. Written at T0 by Indy-init `tools/r9/r9.fsx govern`; `check-governance`
+# fails CI if this file differs from Indy-init's tools/r9/verification-gate.yml. Do not edit it here.
+#
+# A green `dotnet test` is not verification: a skipped or missing test still exits 0. This workflow runs the frozen
+# plan's suites and judges each obligation by the evidence type the plan gives it, at the exact candidate: executable
+# identities by Dokimos 0.11.0, record identities (praxis:*) by requirements-compiler verify-process with attestations
+# observed in this run, mixed obligations by both. Development merges re-check the executable obligations of
+# .echelon/verification-scope.json (which may only grow); a work item (inputs work_item, scope) and release (the whole
+# frozen plan) also judge record evidence. A work item's gate writes the Praxis verification matrix to the artifact.
+name: Verification gate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: development or release
+        default: release
+      work_item:
+        description: Praxis work item to verify (writes its verification matrix); empty for a merge or release check
+        default: ""
+      scope:
+        description: The work item's requirement ids, comma-separated (with work_item)
+        default: ""
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - name: Candidate is the checked-out commit (never an asserted SHA)
+        id: candidate
+        env:
+          CANDIDATE: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$CANDIDATE" || { echo "::error::checkout $(git rev-parse HEAD) is not the candidate $CANDIDATE"; exit 1; }
+          echo "sha=$CANDIDATE" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Indy-init at the governing commit
+        run: |
+          commit=$(jq -r .indyInitCommit .echelon/r9-governance.json)
+          git init -q "$RUNNER_TEMP/indy-init"
+          git -C "$RUNNER_TEMP/indy-init" fetch -q --depth 1 https://github.com/kemiller2002/Indy-init "$commit"
+          git -C "$RUNNER_TEMP/indy-init" checkout -q FETCH_HEAD
+      - name: Governance is unchanged (policy, this workflow, completed items, scope only grows)
+        run: |
+          base_scope=""
+          if [ -n "${{ github.base_ref }}" ]; then
+            git show "origin/${{ github.base_ref }}:.echelon/verification-scope.json" > "$RUNNER_TEMP/base-scope.json" 2>/dev/null && base_scope="--base-scope $RUNNER_TEMP/base-scope.json"
+          fi
+          dotnet fsi "$RUNNER_TEMP/indy-init/tools/r9/r9.fsx" -- check-governance --indy-init "$RUNNER_TEMP/indy-init" --target . $base_scope
+      - name: Pinned toolchain (Conditor 0.10.20, then the echelon-current resolved set)
+        run: |
+          lock="$RUNNER_TEMP/indy-init/kickoff/rehearsal-009/toolchain.lock.json"
+          dotnet fsi "$RUNNER_TEMP/indy-init/tools/r9/r9.fsx" -- install-conditor --lock "$lock" --dir "$RUNNER_TEMP/conditor"
+          dotnet fsi "$RUNNER_TEMP/indy-init/tools/r9/r9.fsx" -- workstation --lock "$lock" --conditor "$RUNNER_TEMP/conditor/conditor" --home "$RUNNER_TEMP/echelon" --target-id "ci-${{ github.run_id }}"
+          echo "$RUNNER_TEMP/echelon/.local/bin" >> "$GITHUB_PATH"
+      - name: Compile the frozen verification plan
+        run: |
+          src="$RUNNER_TEMP/indy-init"
+          dokimos verification compile --indy-execution-plan "$src/requirements-compiled/v4.1.2/verification-execution-plan.json" \
+            --indy-verification-plan "$src/requirements-compiled/v4/verification-plan.json" --out "$RUNNER_TEMP/obligations.json"
+      - name: Run the plan's suites at the candidate
+        env:
+          MODE: ${{ inputs.mode || 'development' }}
+        run: |
+          npm ci
+          # Release runs every executable suite of the plan (live suites need their provider secrets in this job);
+          # development runs the deterministic ones, and the gate refuses any in-scope suite without evidence.
+          suites=""
+          if [ "$MODE" = "development" ]; then suites="--suites SU-OWN-DOTNET,SU-DOTNET-DETERMINISTIC,SU-DOTNET-INVARIANTS,SU-OWN-BROWSER,SU-BROWSER-CHROMIUM"; fi
+          dotnet fsi "$RUNNER_TEMP/indy-init/tools/r9/r9.fsx" -- run-suites --obligations "$RUNNER_TEMP/obligations.json" --root . \
+            --out "$RUNNER_TEMP/results" $suites
+      - name: Record evidence observed by this run (work-item and release checks only)
+        id: records
+        if: inputs.work_item != '' || inputs.mode == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          # Record-bound obligations are judged by requirements-compiler verify-process with the pinned plan and rules
+          # and with attestations this run observes itself; it fails closed while the rules are unpinned.
+          src="$RUNNER_TEMP/indy-init"; lock="$src/kickoff/rehearsal-009/toolchain.lock.json"
+          rules_sha=$(jq -r '.processEvidence.rulesSha256 // empty' "$lock")
+          [[ "$rules_sha" =~ ^[0-9a-f]{64}$ ]] || { echo "::error::process-evidence rules are not pinned by the owner (processEvidence.rulesSha256)"; exit 1; }
+          dotnet build "$src/tools/requirements-compiler/src" -c Release
+          gh api --paginate "repos/$REPO/pulls?state=all&per_page=100" --jq '.[].number' |
+            while read -r n; do
+              gh api --paginate "repos/$REPO/pulls/$n/reviews?per_page=100" | jq -s --argjson n "$n" '{number: $n, reviews: add}'
+            done | jq -s . > "$RUNNER_TEMP/pulls.json"
+          rc="$src/tools/requirements-compiler/src/bin/Release/net10.0/requirements-compiler.dll"
+          dotnet "$rc" review-attestations --repository "$REPO" --run-id "${{ github.run_id }}" \
+            --candidate "${{ steps.candidate.outputs.sha }}" --pulls "$RUNNER_TEMP/pulls.json" --out "$RUNNER_TEMP/attestations.json"
+          echo "args=--rc $rc --process-plan $src/$(jq -r .processEvidence.plan "$lock") --process-plan-digest $(jq -r .processEvidence.planDigest "$lock") --process-rules $src/$(jq -r .processEvidence.rules "$lock") --process-rules-sha256 $rules_sha --process-attestations $RUNNER_TEMP/attestations.json --process-trusted-run-id ${{ github.run_id }}" >> "$GITHUB_OUTPUT"
+      - name: Fault probes at the candidate (content round trips must be fault-sensitive)
+        id: probes
+        run: |
+          # Obligations the plan marks content-round-trip need a detected probe; without .echelon/fault-probes.json
+          # they stay unverified (the gate names them), never silently passed.
+          if [ -f .echelon/fault-probes.json ]; then
+            dokimos verification probe --spec .echelon/fault-probes.json --sha "${{ steps.candidate.outputs.sha }}" --root . \
+              --out "$RUNNER_TEMP/probe-results.json" || true
+            echo "args=--probes $RUNNER_TEMP/probe-results.json" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Verification gate (executable, record and mixed obligations)
+        env:
+          MODE: ${{ inputs.mode || 'development' }}
+          WORK_ITEM: ${{ inputs.work_item }}
+          SCOPE: ${{ inputs.scope }}
+        run: |
+          scope=""
+          if [ -n "$WORK_ITEM" ]; then scope="--work-item $WORK_ITEM --scope $SCOPE"
+          elif [ "$MODE" = "development" ]; then scope="--scope-file .echelon/verification-scope.json"; fi
+          dotnet fsi "$RUNNER_TEMP/indy-init/tools/r9/r9.fsx" -- gate --mode "$MODE" $scope ${{ steps.records.outputs.args }} \
+            ${{ steps.probes.outputs.args }} --require-fault-sensitive content-round-trip \
+            --obligations "$RUNNER_TEMP/obligations.json" --root . --results "$RUNNER_TEMP/results/results.json" \
+            --dokimos "$(command -v dokimos)" --expect-candidate "${{ steps.candidate.outputs.sha }}" --out "$RUNNER_TEMP/gate"
+      - name: Publish the coverage report, results and verdict
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-${{ steps.candidate.outputs.sha }}
+          path: |
+            ${{ runner.temp }}/gate
+            ${{ runner.temp }}/results
+            ${{ runner.temp }}/obligations.json
+            ${{ runner.temp }}/attestations.json
+            ${{ runner.temp }}/probe-results.json
