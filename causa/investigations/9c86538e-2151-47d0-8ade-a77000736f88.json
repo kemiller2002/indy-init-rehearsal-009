@@ -122,6 +122,61 @@
       "type": "conclusion-recorded",
       "id": "84a9d644-9867-4ab9-b846-aff0fe5fffbf",
       "statement": "Working conclusion: cold lubricant is the most credible cause; the relay setting is ruled out."
+    },
+    {
+      "sequence": 13,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:50:24.8400000\u002B00:00",
+      "type": "details-edited",
+      "title": "Pump P-101 night-shift trips (2026-11-04T01:50:15.618Z)",
+      "problemStatement": "Pump P-101 tripped three times on the night shift of 3 November; each trip stopped line 2 for about 40 minutes.",
+      "question": "What raises P-101\u0027s motor current on cold nights?"
+    },
+    {
+      "sequence": 14,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:50:24.9820000\u002B00:00",
+      "type": "observation-edited",
+      "id": "0f3ff83f-7aaf-43af-811f-9661c3e184de",
+      "text": "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05 (three trips).",
+      "source": "SCADA trip log, line 2"
+    },
+    {
+      "sequence": 15,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:50:25.1310000\u002B00:00",
+      "type": "hypothesis-edited",
+      "id": "b7339204-3c72-4b9c-ad46-865d1b213ba4",
+      "statement": "Cold, viscous lubricant raises motor load above the 42 A overcurrent pickup.",
+      "explanation": "Explains why trips cluster when the room is cold."
+    },
+    {
+      "sequence": 16,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:50:25.2830000\u002B00:00",
+      "type": "evidence-edited",
+      "id": "4d0f77fb-b74c-464f-a670-29c53011e4d2",
+      "label": "Lubricant datasheet (rev C)",
+      "content": "Viscosity at 5 \u00B0C is 2.4x the value at 25 \u00B0C.",
+      "source": "Supplier datasheet rev C",
+      "url": "https://example.com/datasheets/lube-46.pdf"
+    },
+    {
+      "sequence": 17,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:50:25.4650000\u002B00:00",
+      "type": "relationship-reassessed",
+      "id": "5c818332-7568-4c37-a067-467701f56773",
+      "kind": "supports",
+      "rationale": "Reassessed: the relay record alone cannot settle the load question."
+    },
+    {
+      "sequence": 18,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:50:25.6080000\u002B00:00",
+      "type": "conclusion-revised",
+      "id": "84a9d644-9867-4ab9-b846-aff0fe5fffbf",
+      "statement": "Revised conclusion: cold lubricant is the cause; schedule a lubricant change and re-test."
     }
   ]
 }
