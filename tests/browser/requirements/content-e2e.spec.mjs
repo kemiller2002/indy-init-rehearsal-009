@@ -320,7 +320,21 @@ test("INVESTIGATION-CONTENT-E2E: enter, save, reload in a new browser context, e
     const kept = [content.observations[0].text, content.hypotheses[0].statement, content.evidence[0].label].every((t) => history.includes(short(t)));
     probe.outcome("INV-035", "reload", `${obsIdBefore}|earlier text in history`, `${finalObsId}|${kept ? "earlier text in history" : "earlier text missing"}`);
     probe.outcome("INV-035", "update", `${edits.observation}|${edits.hypothesis}|${edits.evidence}|${edits.title}`, `${final.observations[0]}|${final.hypotheses[0]}|${final.evidence[0]}|${final.title}`);
+    // The edited round trip must hold in full; a fault anywhere in wiring, projection, view or relationships fails here.
     expect(final.conclusions).toEqual([edits.conclusion]);
+    expect(final.observations).toEqual([edits.observation, content.observations[1].text]);
+    expect(final.observationSources).toEqual(content.observations.map((o) => o.source));
+    expect(final.hypotheses).toEqual([edits.hypothesis, content.hypotheses[1].statement]);
+    expect(final.explanations).toEqual(content.hypotheses.map((x) => x.explanation));
+    expect(final.evidence).toEqual([edits.evidence, content.evidence[1].label]);
+    expect(final.evidenceUrls).toEqual(content.evidence.map((x) => x.url));
+    expect(final.links.map((l) => `${l.evidence}|${l.kind}|${l.hypothesis}|${l.rationale}`)).toEqual([
+      `${edits.evidence}|supports|${edits.hypothesis}|${content.links[0].rationale}`,
+      `${content.evidence[1].label}|contradicts|${content.hypotheses[1].statement}|${content.links[1].rationale}`,
+      `${edits.evidence}|consistent-with|${content.hypotheses[1].statement}|${content.links[2].rationale}`,
+      `${content.evidence[1].label}|${edits.reassess.kind}|${edits.hypothesis}|${edits.reassess.rationale}`,
+    ]);
+    expect(`${final.title}|${final.statement}|${final.original}|${final.question}`).toBe(`${edits.title}|${content.statement}|${content.statement}|${edits.question}`);
     await second.close();
     await third.close();
   } finally {

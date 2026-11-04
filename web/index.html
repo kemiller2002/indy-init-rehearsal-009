@@ -123,7 +123,7 @@
                 <template data-if="isConflict"><button type="button" class="ef-button causa-secondary" data-event="reloadSaved">Discard my changes and load the saved copy</button></template>
               </div>
               <div class="causa-actions">
-                <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-034" data-event="editDetails" aria-controls="causa-editor">Edit investigation details</button>
+                <button type="button" class="ef-button causa-secondary" data-requirement-id="INV-034" data-event="editDetails">Edit investigation details</button>
               </div>
             </section>
 
@@ -154,11 +154,11 @@
                   <li class="causa-item" data-testid="observation" data-bind-data-id="id">
                     <p class="causa-prose" data-testid="observation-text" data-text="text"></p>
                     <template data-if="hasSource"><p class="causa-meta">Source: <span data-testid="observation-source" data-text="source"></span></p></template>
-                    <button type="button" class="ef-button causa-secondary" data-event="editObservation" aria-controls="causa-editor">Edit observation</button>
+                    <button type="button" class="ef-button causa-secondary" data-event="editObservation">Edit observation</button>
                   </li>
                 </template>
               </ul>
-              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-014" data-event="newObservation" aria-controls="causa-editor">Record an observation</button></div></template>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-014" data-event="newObservation">Record an observation</button></div></template>
               <template data-if="editingObservation">
                 <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="obs-editor-heading">
                   <h3 id="obs-editor-heading" data-text="editorHeading"></h3>
@@ -185,12 +185,12 @@
                     <p class="causa-prose" data-testid="hypothesis-statement" data-text="statement"></p>
                     <template data-if="hasExplanation"><p class="causa-meta">Explains: <span data-testid="hypothesis-explanation" data-text="explanation"></span></p></template>
                     <template data-if="hasLinks"><p class="causa-meta">Evidence: <span data-testid="hypothesis-links" data-text="links"></span></p></template>
-                    <button type="button" class="ef-button causa-secondary" data-event="editHypothesis" aria-controls="causa-editor">Edit hypothesis</button>
+                    <button type="button" class="ef-button causa-secondary" data-event="editHypothesis">Edit hypothesis</button>
                   </li>
                 </template>
               </ul>
               </div>
-              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-009" data-event="newHypothesis" aria-controls="causa-editor">Record a hypothesis</button></div></template>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-009" data-event="newHypothesis">Record a hypothesis</button></div></template>
               <template data-if="editingHypothesis">
                 <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="hyp-editor-heading">
                   <h3 id="hyp-editor-heading" data-text="editorHeading"></h3>
@@ -217,12 +217,12 @@
                     <template data-if="hasSource"><p class="causa-meta">Source: <span data-testid="evidence-source" data-text="source"></span></p></template>
                     <template data-if="hasUrl"><p class="causa-meta">Link: <a data-testid="evidence-url" rel="noopener noreferrer" target="_blank" data-bind-href="url" data-text="url"></a></p></template>
                     <template data-if="hasLinks"><p class="causa-meta">Hypotheses: <span data-testid="evidence-links" data-text="links"></span></p></template>
-                    <button type="button" class="ef-button causa-secondary" data-event="editEvidence" aria-controls="causa-editor">Edit evidence</button>
+                    <button type="button" class="ef-button causa-secondary" data-event="editEvidence">Edit evidence</button>
                   </li>
                 </template>
               </ul>
               </div>
-              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-event="newEvidence" aria-controls="causa-editor">Record evidence</button></div></template>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-event="newEvidence">Record evidence</button></div></template>
               <template data-if="editingEvidence">
                 <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="ev-editor-heading">
                   <h3 id="ev-editor-heading" data-text="editorHeading"></h3>
@@ -252,13 +252,13 @@
                     <p><span class="causa-strong" data-testid="relationship-evidence" data-text="evidence"></span> — <span class="causa-badge" data-testid="relationship-kind" data-text="kindLabel"></span> — <span data-testid="relationship-hypothesis" data-text="hypothesis"></span></p>
                     <p class="causa-meta">Rationale: <span data-testid="relationship-rationale" data-text="rationale"></span></p>
                     <div class="causa-actions">
-                      <button type="button" class="ef-button causa-secondary" data-event="reassess" aria-controls="causa-editor">Reassess</button>
-                      <button type="button" class="ef-button causa-secondary" data-event="withdraw" aria-controls="causa-editor">Withdraw</button>
+                      <button type="button" class="ef-button causa-secondary" data-event="reassess">Reassess</button>
+                      <button type="button" class="ef-button causa-secondary" data-event="withdraw">Withdraw</button>
                     </div>
                   </li>
                 </template>
               </ul>
-              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-030" data-event="newLink" aria-controls="causa-editor">Link evidence to a hypothesis</button></div></template>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-030" data-event="newLink">Link evidence to a hypothesis</button></div></template>
               <template data-if="editingLink">
                 <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="link-editor-heading">
                   <h3 id="link-editor-heading" data-text="editorHeading"></h3>
@@ -313,11 +313,11 @@
                 <template data-each="conclusions" data-key="id">
                   <li class="causa-item" data-testid="conclusion" data-bind-data-id="id">
                     <p class="causa-prose" data-testid="conclusion-statement" data-text="statement"></p>
-                    <button type="button" class="ef-button causa-secondary" data-event="reviseConclusion" aria-controls="causa-editor">Revise conclusion</button>
+                    <button type="button" class="ef-button causa-secondary" data-event="reviseConclusion">Revise conclusion</button>
                   </li>
                 </template>
               </ul>
-              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-032" data-event="newConclusion" aria-controls="causa-editor">Record a conclusion</button></div></template>
+              <template data-if="noEditor"><div class="causa-actions"><button type="button" class="ef-button" data-requirement-id="INV-032" data-event="newConclusion">Record a conclusion</button></div></template>
               <template data-if="editingConclusion">
                 <form id="causa-editor" class="ef-form causa-form causa-editor" data-event="submitEditor" novalidate aria-labelledby="con-editor-heading">
                   <h3 id="con-editor-heading" data-text="editorHeading"></h3>

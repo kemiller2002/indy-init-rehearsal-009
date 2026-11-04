@@ -27,7 +27,7 @@ body { margin: 0; font-size: 1rem; line-height: 1.5; color: var(--ef-color-text-
 .causa-help, .causa-meta { color: var(--ef-color-text-secondary, #555); font-size: 0.9375rem; margin: 0.25rem 0; }
 .causa-notice:empty { display: none; }
 .causa-notice { background: var(--ef-color-surface-primary, #fff); border-left: 4px solid var(--ef-color-status-info, #0b5cad); padding: 0.5rem 0.75rem; }
-.causa-destination { background: var(--ef-color-surface-secondary, #f5f5f5); padding: 0.5rem; border-radius: 0.25rem; }
+.causa-destination { background: var(--ef-color-surface-secondary, #f5f5f5); color: #1a1a1a; padding: 0.5rem; border-radius: 0.25rem; border: 1px solid var(--ef-color-border-subtle, #ddd); }
 .causa-facts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.125rem; margin: 0 0 1rem; }
 .causa-facts dt { font-weight: 600; margin-top: 0.5rem; }
 .causa-facts dd { margin: 0; min-width: 0; }

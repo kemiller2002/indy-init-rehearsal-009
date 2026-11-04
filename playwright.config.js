@@ -25,6 +25,7 @@ export default defineConfig({
     command: `python3 -m http.server ${port} --bind 127.0.0.1 --directory dist`,
     url: `${origin}/index.html`,
     reuseExistingServer: !process.env.CI,
+    stderr: "ignore",
     timeout: 60_000
   }
 });
