@@ -6,9 +6,56 @@ module Evolve =
     let private replaceBy (idOf: 'a -> string) (item: 'a) (items: 'a list) =
         items |> List.map (fun x -> if idOf x = idOf item then item else x)
 
+    let private checkAll (checks: (FieldRule * string) list) =
+        checks
+        |> List.tryPick (fun (rule, value) -> match Rules.check rule value with Error m -> Some m | Ok _ -> None)
+        |> function
+            | Some m -> Error m
+            | None -> Ok()
+
+    /// The catalog's value rules hold for every value an event carries (a saved document is not trusted).
+    let private admissible (event: ContentEvent) =
+        let details (d: Details) = [ Rules.title, d.Title; Rules.problemStatement, d.ProblemStatement; Rules.question, d.Question ]
+
+        match event with
+        | Started(id, _, d) -> checkAll ((Rules.identifier, id) :: details d)
+        | DetailsEdited d -> checkAll (details d)
+        | ObservationRecorded o | ObservationEdited o -> checkAll [ Rules.observationText, o.Text; Rules.observationSource, o.Source ]
+        | HypothesisRecorded h | HypothesisEdited h -> checkAll [ Rules.hypothesisStatement, h.Statement ]
+        | EvidenceAdmitted e | EvidenceEdited e -> checkAll [ Rules.evidenceLabel, e.Label; Rules.evidenceSource, e.Source; Rules.evidenceUrl, e.Url ]
+        | RelationshipRecorded r -> checkAll [ Rules.rationale, r.Rationale ]
+        | RelationshipReassessed(_, _, rationale) -> checkAll [ Rules.rationale, rationale ]
+        | RelationshipWithdrawn(_, reason) -> checkAll [ Rules.rationale, reason ]
+        | ConclusionRecorded c | ConclusionRevised c -> checkAll [ Rules.conclusionStatement, c.Statement ]
+
+    let private known (what: string) (ids: string list) (id: string) (sequence: int) =
+        if List.contains id ids then Ok() else Error $"event {sequence} refers to {what} {id}, which does not exist"
+
+    /// The identifiers an event refers to must exist (edits, links, reassessments, withdrawals).
+    let private referencesExist (inv: ContentInvestigation) (record: EventRecord) =
+        let n = record.Sequence
+        let ids (xs: 'a list) (idOf: 'a -> string) = xs |> List.map idOf
+
+        match record.Event with
+        | ObservationEdited o -> known "observation" (ids inv.Observations (fun x -> x.Id)) o.Id n
+        | HypothesisEdited h -> known "hypothesis" (ids inv.Hypotheses (fun x -> x.Id)) h.Id n
+        | EvidenceEdited e -> known "evidence" (ids inv.Evidence (fun x -> x.Id)) e.Id n
+        | RelationshipRecorded r ->
+            known "evidence" (ids inv.Evidence (fun x -> x.Id)) r.EvidenceId n
+            |> Result.bind (fun () -> known "hypothesis" (ids inv.Hypotheses (fun x -> x.Id)) r.HypothesisId n)
+        | RelationshipReassessed(id, _, _)
+        | RelationshipWithdrawn(id, _) -> known "link" (ids inv.Relationships (fun x -> x.Id)) id n
+        | ConclusionRevised c -> known "conclusion" (ids inv.Conclusions (fun x -> x.Id)) c.Id n
+        | _ -> Ok()
+
     /// Apply one recorded event. An event that does not fit the current state is an error, never ignored.
     let evolve (current: ContentInvestigation option) (record: EventRecord) : Result<ContentInvestigation, string> =
         let keep (inv: ContentInvestigation) = { inv with History = inv.History @ [ record ] }
+
+        match admissible record.Event |> Result.mapError (fun m -> $"event {record.Sequence}: {m}"), current with
+        | Error m, _ -> Error m
+        | Ok(), Some inv when (referencesExist inv record |> Result.isError) -> referencesExist inv record |> Result.map (fun () -> inv)
+        | Ok(), _ ->
 
         match current, record.Event with
         | None, Started(id, createdAt, details) ->

@@ -39,7 +39,7 @@ const edits = {
   observation: "Trip log shows overcurrent alarms at 01:12, 02:47 and 04:05 (three trips).",
   hypothesis: "Cold, viscous lubricant raises motor load above the 42 A overcurrent pickup.",
   evidence: "Lubricant datasheet (rev C)",
-  reassess: { kind: "inconclusive", rationale: "Reassessed: the relay record alone cannot settle the load question." },
+  reassess: { kind: "supports", rationale: "Reassessed: the relay record alone cannot settle the load question." },
   conclusion: "Revised conclusion: cold lubricant is the cause; schedule a lubricant change and re-test.",
 };
 

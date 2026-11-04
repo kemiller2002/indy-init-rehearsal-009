@@ -194,6 +194,11 @@ test.describe("INVESTIGATION-CONTENT-NEGATIVE scenarios", () => {
       ["unknown relationship kind", JSON.stringify({ schema: "causa.investigation/1", id, events: [
         { sequence: 1, actor: "x", at: "2026-11-04T00:00:00Z", type: "started", id, createdAt: "2026-11-04T00:00:00Z", title: "", problemStatement: "s", question: "" },
         { sequence: 2, actor: "x", at: "2026-11-04T00:00:00Z", type: "relationship-recorded", id: "r", evidenceId: "e", hypothesisId: "h", kind: "proves", rationale: "r" }] })],
+      ["link to evidence that does not exist", JSON.stringify({ schema: "causa.investigation/1", id, events: [
+        { sequence: 1, actor: "x", at: "2026-11-04T00:00:00Z", type: "started", id, createdAt: "2026-11-04T00:00:00Z", title: "", problemStatement: "s", question: "" },
+        { sequence: 2, actor: "x", at: "2026-11-04T00:00:00Z", type: "relationship-recorded", id: "r", evidenceId: "e", hypothesisId: "h", kind: "supports", rationale: "r" }] })],
+      ["value breaking a catalog rule", JSON.stringify({ schema: "causa.investigation/1", id, events: [
+        { sequence: 1, actor: "x", at: "2026-11-04T00:00:00Z", type: "started", id, createdAt: "2026-11-04T00:00:00Z", title: "t".repeat(201), problemStatement: "s", question: "" }] })],
       ["broken sequence", JSON.stringify({ schema: "causa.investigation/1", id, events: [
         { sequence: 2, actor: "x", at: "2026-11-04T00:00:00Z", type: "started", id, createdAt: "2026-11-04T00:00:00Z", title: "", problemStatement: "s", question: "" }] })],
     ];
@@ -208,5 +213,44 @@ test.describe("INVESTIGATION-CONTENT-NEGATIVE scenarios", () => {
       await expect(fresh.locator("#ws-heading"), name).toHaveCount(0);
       await context.close();
     }
+  });
+
+  test("a save whose answer is lost: the retry finds GitHub already holds it and saves the later edits, losing nothing", async ({ page, request }) => {
+    const store = gh.createStore();
+    const id = await startWith(page, store);
+    gh.injectFault(store, { method: "PUT", applyThenAbort: true });
+    await page.getByRole("button", { name: "Save", exact: true }).click();
+    await expect(saveState(page)).toContainText(/Save failed|could not be reached/);
+    expect(store.writes).toHaveLength(1);
+    await causa.recordObservation(page, { text: "Recorded after the lost answer." });
+    await page.getByRole("button", { name: "Save", exact: true }).click();
+    await expect(saveState(page)).toHaveText("Saved to GitHub");
+    const held = causa.replay(await gh.storedDocument(store, request, id));
+    expect(held.observations.map((o) => o.text)).toEqual(["Discharge temperature reached 118 °C after the 07:00 restart.", "Recorded after the lost answer."]);
+  });
+
+  test("a link with the identifier in uppercase opens the saved investigation", async ({ browser, page }) => {
+    const store = gh.createStore();
+    const id = await startWith(page, store);
+    expect(await causa.save(page)).toBe("Saved to GitHub");
+    const other = await browser.newContext();
+    await gh.install(other, store);
+    const page2 = await other.newPage();
+    await causa.open(page2, `#/investigation/${id.toUpperCase()}`);
+    await causa.connect(page2);
+    await expect(page2.locator('[data-requirement-id="INV-008"]')).toHaveText("Compressor C-4 overheats after restarts.");
+    await other.close();
+  });
+
+  test("navigating away in the app keeps unsaved changes and restores them", async ({ page }) => {
+    const store = gh.createStore();
+    const first = await startWith(page, store);
+    await causa.recordObservation(page, { text: "Kept while I look elsewhere." });
+    await causa.gotoStart(page);
+    await causa.submitStart(page, { statement: "Another one.", identifier: randomUUID() });
+    await page.evaluate((id) => { location.hash = `#/investigation/${id}`; }, first);
+    await expect(page.locator('[data-requirement-id="INV-008"]')).toHaveText("Compressor C-4 overheats after restarts.");
+    expect(await causa.texts(page, "observation-text")).toEqual(["Discharge temperature reached 118 °C after the 07:00 restart.", "Kept while I look elsewhere."]);
+    await expect(saveState(page)).toHaveText("Not saved");
   });
 });

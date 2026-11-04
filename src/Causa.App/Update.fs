@@ -48,6 +48,8 @@ type Purpose =
     | ListIndex
     | LoadInvestigation of string
     | SaveInvestigation of id: string * length: int
+    /// After a refused save: read GitHub's copy to tell a real conflict from a save whose answer was lost.
+    | RecheckConflict of id: string * message: string
 
 type Effect =
     | Http of correlation: string * GitHubRequest * authorization: string
@@ -59,6 +61,8 @@ type Model =
       Index: IndexState
       Load: LoadState
       Session: Session option
+      /// Investigations with unsaved changes the user navigated away from; reopening one restores it.
+      Parked: Map<string, Session>
       Drafts: Map<string, string>
       Errors: Map<string, string>
       Editor: Editor
@@ -87,6 +91,7 @@ module Update =
           Index = IndexNotLoaded
           Load = NotLoading
           Session = None
+          Parked = Map.empty
           Drafts = Map.ofList [ "owner", "kemiller2002"; "repository", "indy-init-rehearsal-009"; "branch", "causa-data" ]
           Errors = Map.empty
           Editor = NoEditor
@@ -120,11 +125,23 @@ module Update =
         { model with Screen = screen; Counter = model.Counter + 1; Editor = NoEditor; Errors = Map.empty }, [ PushUrl(correlation, Screen.format screen) ]
 
     /// Make sure the workspace's investigation is in memory: load it from GitHub when connected.
+    let private unsaved (s: Session) = s.Sha.IsNone || s.Investigation.History.Length <> s.SavedLength
+
+    /// Leaving an investigation with unsaved changes parks it instead of discarding it.
+    let private park (model: Model) =
+        match model.Session with
+        | Some s when unsaved s -> { model with Parked = model.Parked |> Map.add s.Investigation.Id s }
+        | _ -> model
+
     let private ensureLoaded (model: Model, effects: Effect list) =
         match model.Screen, model.Session, destination model with
         | Workspace id, Some s, _ when s.Investigation.Id = id -> model, effects
+        | Workspace id, _, _ when model.Parked.ContainsKey id ->
+            let parked = model.Parked[id]
+            let m = park model
+            { m with Session = Some parked; Parked = m.Parked |> Map.remove id; Load = NotLoading; Notice = "Restored your unsaved changes to this investigation." }, effects
         | Workspace id, _, Some d when model.Load <> Loading id ->
-            let m, e = request (LoadInvestigation id) (GitHub.readInvestigation d id) { model with Load = Loading id }
+            let m, e = request (LoadInvestigation id) (GitHub.readInvestigation d id) { (park model) with Load = Loading id }
             m, effects @ e
         | _ -> model, effects
 
@@ -219,7 +236,7 @@ module Update =
         match Evolve.execute context None (Start(identifier, input)) with
         | Error refusals -> { model with Errors = refusalsToErrors refusals; Notice = "The investigation was not started: correct the highlighted field." }, []
         | Ok inv ->
-            let m = { (clearDrafts ("identifier" :: editorFields) model) with
+            let m = { (clearDrafts ("identifier" :: editorFields) (park model)) with
                         Session = Some { Investigation = inv; Sha = None; SavedLength = 0; Save = NeverSaved }
                         StartIdentifier = env.NewId
                         Notice = "Investigation started. Unsaved: select Save to write it to GitHub." }
@@ -273,7 +290,7 @@ module Update =
         | "retrySave" -> save model
         | "reloadSaved" ->
             match model.Screen with
-            | Workspace id -> ensureLoaded ({ model with Session = None; Load = NotLoading; Editor = NoEditor }, [])
+            | Workspace id -> ensureLoaded ({ model with Session = None; Parked = model.Parked |> Map.remove id; Load = NotLoading; Editor = NoEditor }, [])
             | _ -> model, []
         | "editDetails" ->
             match inv with
@@ -329,6 +346,7 @@ module Update =
             | ListIndex, (AuthenticationFailed m | ConflictDetected m | Unavailable m) -> { model with Index = IndexFailed m }, []
             | LoadInvestigation id, Succeeded body ->
                 match GitHub.fileContent body |> Result.bind (fun (text, sha) -> Document.decode id text |> Result.map (fun inv -> inv, sha)) with
+                | Ok(_, _) when model.Screen <> Workspace id -> { model with Load = NotLoading }, []
                 | Ok(inv, sha) ->
                     { model with
                         Load = NotLoading
@@ -338,6 +356,25 @@ module Update =
             | LoadInvestigation id, NotFound -> { model with Load = LoadFailed(id, "No saved investigation has this identifier.") }, []
             | LoadInvestigation id, AuthenticationFailed m -> { model with Load = LoadFailed(id, m); Connection = ConnectFailed $"{m} Reconnect to load the investigation." }, []
             | LoadInvestigation id, (ConflictDetected m | Unavailable m) -> { model with Load = LoadFailed(id, m) }, []
+            | RecheckConflict(id, message), result ->
+                match model.Session with
+                | Some session when session.Investigation.Id = id ->
+                    let remote =
+                        match result with
+                        | Succeeded body -> GitHub.fileContent body |> Result.bind (fun (text, sha) -> Document.decode id text |> Result.map (fun inv -> inv, sha)) |> Result.toOption
+                        | _ -> None
+                    let local = session.Investigation.History
+
+                    match remote with
+                    // GitHub holds an earlier state of this very history (e.g. a save whose answer was lost):
+                    // nothing of anyone else's would be overwritten, so save again on GitHub's copy.
+                    | Some(r, sha) when r.History.Length <= local.Length && List.truncate r.History.Length local = r.History ->
+                        let resumed = { model with Session = Some { session with Sha = Some sha; SavedLength = r.History.Length; Save = NeverSaved } }
+                        if r.History.Length = local.Length then
+                            { resumed with Session = Some { session with Sha = Some sha; SavedLength = local.Length; Save = Saved }; Notice = "Saved to GitHub." }, []
+                        else save resumed
+                    | _ -> { model with Notice = $"Not saved. {message} Someone else changed it: load the saved copy to continue." }, []
+                | _ -> model, []
             | SaveInvestigation(id, length), result ->
                 match model.Session with
                 | Some session when session.Investigation.Id = id ->
@@ -347,7 +384,7 @@ module Update =
                             let current = session.Investigation.History.Length
                             (if current = length then Saved else NeverSaved), GitHub.writtenSha body, length, "Saved to GitHub."
                         | AuthenticationFailed m -> SaveAuthFailed m, session.Sha, session.SavedLength, $"Not saved. {m}"
-                        | ConflictDetected m -> SaveConflict m, session.Sha, session.SavedLength, $"Not saved. {m}"
+                        | ConflictDetected m -> SaveConflict m, session.Sha, session.SavedLength, "Checking GitHub's copy…"
                         | Unavailable m -> SaveFailed m, session.Sha, session.SavedLength, $"Not saved. {m}"
                         | NotFound -> SaveFailed "GitHub could not find the repository or branch (404).", session.Sha, session.SavedLength, "Not saved."
 
@@ -361,11 +398,16 @@ module Update =
                         | AuthenticationFailed m -> ConnectFailed $"{m} Reconnect, then select Save again."
                         | _ -> model.Connection
 
-                    { model with
-                        Session = Some { session with Save = state; Sha = (match sha with Some s -> Some s | None -> session.Sha); SavedLength = savedLength }
-                        Connection = connection
-                        Index = indexed
-                        Notice = notice }, []
+                    let next =
+                        { model with
+                            Session = Some { session with Save = state; Sha = (match sha with Some s -> Some s | None -> session.Sha); SavedLength = savedLength }
+                            Connection = connection
+                            Index = indexed
+                            Notice = notice }
+
+                    match result, destination model with
+                    | ConflictDetected m, Some d -> request (RecheckConflict(id, m)) (GitHub.readInvestigation d id) next
+                    | _ -> next, []
                 | _ -> model, []
 
     let update (env: Env) (msg: Msg) (model: Model) : Model * Effect list =

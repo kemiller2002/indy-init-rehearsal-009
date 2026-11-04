@@ -17,7 +17,7 @@ module Screen =
         match path.Split('/', StringSplitOptions.RemoveEmptyEntries) |> List.ofArray with
         | [] -> Home
         | [ "start" ] -> StartScreen
-        | [ "investigation"; id ] -> Workspace id
+        | [ "investigation"; id ] -> Workspace(id.ToLowerInvariant())
         | _ -> Missing path
 
     let format (screen: Screen) : string =

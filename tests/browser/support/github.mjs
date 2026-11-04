@@ -41,6 +41,16 @@ export const install = async (context, store) => {
     if (method === "OPTIONS") return route.fulfill({ status: 204, headers: { "access-control-allow-origin": "*", "access-control-allow-headers": "*", "access-control-allow-methods": "GET, PUT" } });
 
     const fault = store.faults.findIndex((f) => f.method === method && (!f.path || url.pathname.includes(f.path)));
+    if (fault >= 0 && store.faults[fault].applyThenAbort) {
+      // GitHub applies the write, but its answer never reaches the browser.
+      store.faults.splice(fault, 1);
+      const body = JSON.parse(request.postData() ?? "{}");
+      const path = decodeURIComponent(url.pathname.slice(`${prefix}/contents/`.length));
+      const text = Buffer.from(body.content, "base64").toString("utf8");
+      store.files.set(path, { text, sha: blobSha(text) });
+      store.writes.push({ path, message: body.message, branch: body.branch });
+      return route.abort("connectionreset");
+    }
     if (fault >= 0) {
       const [f] = store.faults.splice(fault, 1);
       if (f.abort) return route.abort(f.abort);

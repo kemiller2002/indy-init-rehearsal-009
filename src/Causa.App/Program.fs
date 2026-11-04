@@ -50,6 +50,8 @@ module Protocol =
                                 |> Option.map (fun b -> if b.ValueKind = JsonValueKind.String then (b.GetString() |> Option.ofObj |> Option.defaultValue "") else b.GetRawText())
                                 |> Option.defaultValue ""
                             Answered(s, body)
+                        // A 2xx whose body would not decode is not a success: nothing usable came back.
+                        | Some "Failure", Some s when s >= 200 && s < 300 -> NoAnswer $"invalid response ({s})"
                         | Some "Failure", Some s -> Answered(s, "")
                         | Some kind, _ ->
                             let reason = outcome |> Option.bind (text "reason") |> Option.defaultValue kind

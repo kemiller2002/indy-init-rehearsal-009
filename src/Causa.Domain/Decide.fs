@@ -105,7 +105,12 @@ module Decide =
                                 Rationale = rationale } ])
         | Some inv, Reassess(id, kind, rationale) ->
             if not (exists inv.Relationships (fun r -> r.Id) id) then refuse "relationshipKind" "That link does not exist."
-            else assessment kind rationale |> Result.map (fun (k, r) -> [ RelationshipReassessed(id, k, r) ])
+            else
+                assessment kind rationale
+                |> Result.bind (fun (k, r) ->
+                    match inv.Relationships |> List.tryFind (fun x -> x.Id = id) with
+                    | Some existing when existing.Kind = k && existing.Rationale = r -> unchanged "relationshipKind"
+                    | _ -> Ok [ RelationshipReassessed(id, k, r) ])
         | Some inv, Withdraw(id, reason) ->
             if not (exists inv.Relationships (fun r -> r.Id) id) then refuse "rationale" "That link does not exist."
             else
