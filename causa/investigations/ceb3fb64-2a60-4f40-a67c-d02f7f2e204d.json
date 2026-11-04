@@ -1,0 +1,65 @@
+{
+  "schema": "causa.investigation/1",
+  "id": "ceb3fb64-2a60-4f40-a67c-d02f7f2e204d",
+  "events": [
+    {
+      "sequence": 1,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:16:58.2400000\u002B00:00",
+      "type": "started",
+      "id": "ceb3fb64-2a60-4f40-a67c-d02f7f2e204d",
+      "createdAt": "2026-11-04T01:16:58.2400000\u002B00:00",
+      "title": "M-2 vibration",
+      "problemStatement": "Mixer M-2 vibrates at 50% speed.",
+      "question": "What excites the vibration?"
+    },
+    {
+      "sequence": 2,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:16:58.7860000\u002B00:00",
+      "type": "observation-recorded",
+      "id": "7e338816-e8fe-4816-8b5c-5b641c6b3ce3",
+      "text": "Vibration peaks at 1480 rpm.",
+      "source": ""
+    },
+    {
+      "sequence": 3,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:16:59.0720000\u002B00:00",
+      "type": "hypothesis-recorded",
+      "id": "ef584e52-8755-4af1-bd47-e7605e0f6950",
+      "statement": "The impeller is out of balance.",
+      "explanation": ""
+    },
+    {
+      "sequence": 4,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:16:59.4590000\u002B00:00",
+      "type": "evidence-admitted",
+      "id": "1a24b345-a6ba-4003-b7c5-8c82761a4335",
+      "label": "Vibration spectrum",
+      "content": "",
+      "source": "",
+      "url": "https://example.com/spectra/m2-very-long-path-segment-that-must-wrap-on-a-narrow-screen/2026-11-04.png"
+    },
+    {
+      "sequence": 5,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:16:59.8730000\u002B00:00",
+      "type": "relationship-recorded",
+      "id": "67d4b731-b657-4bcd-8ba0-ab1fce6cb244",
+      "evidenceId": "1a24b345-a6ba-4003-b7c5-8c82761a4335",
+      "hypothesisId": "ef584e52-8755-4af1-bd47-e7605e0f6950",
+      "kind": "supports",
+      "rationale": "A 1x running-speed peak is the signature of imbalance."
+    },
+    {
+      "sequence": 6,
+      "actor": "causa-user",
+      "at": "2026-11-04T01:17:00.1850000\u002B00:00",
+      "type": "conclusion-recorded",
+      "id": "d7dea462-ad2e-4bf5-a92d-2948484f738b",
+      "statement": "Imbalance is the leading explanation."
+    }
+  ]
+}
