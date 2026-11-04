@@ -1,0 +1,495 @@
+{
+  "schema": "dokimos.requirement-observations/1",
+  "runId": "41754817534-double",
+  "sourceCommit": "33d072da798a4ec762f15cebfc3c205c9014bbbd",
+  "manifestHash": "63936e8fab4692b0007490239079f0a2b5f56884d24fc8ee1bff0dfecdface21",
+  "facts": {
+    "domain-profile-selected": false
+  },
+  "probes": [
+    {
+      "obligation": "INV-001/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Problem statement",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-002/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Title (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-023/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Primary investigative question (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-006/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Investigation identifier",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-004/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "submit",
+          "role": "button",
+          "accessibleName": "Start investigation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-022/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-005/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "p",
+          "type": "",
+          "role": "note",
+          "accessibleName": "Persistence destination",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-009/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-014/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record an observation",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-015/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Save",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-016/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "p",
+          "type": "",
+          "role": "status",
+          "accessibleName": "Save state",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-030/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Link evidence to a hypothesis",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-032/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Record a conclusion",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-034/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Edit investigation details",
+          "disabled": false,
+          "readOnly": false,
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-024/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Observation",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-025/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "observation",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-026/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Hypothesis statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "hypothesis",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-027/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Evidence label",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-028/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Source reference (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-029/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "input",
+          "type": "text",
+          "role": "textbox",
+          "accessibleName": "Source URL (optional)",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "evidence",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-031/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "fieldset",
+          "type": "",
+          "role": "group",
+          "accessibleName": "Relationship",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [
+            "supports",
+            "contradicts",
+            "consistent-with",
+            "inconclusive"
+          ],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-038/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Rationale",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "link",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-033/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "textarea",
+          "type": "",
+          "role": "textbox",
+          "accessibleName": "Conclusion statement",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "new",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "conclusion",
+          "options": [],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "obligation": "INV-036/V2/accessible",
+      "test": "playwright:requirements/content-mobile.spec.mjs > INVESTIGATION-CONTENT-MOBILE at 390 px: start, workspace and every editor [chromium]",
+      "elements": [
+        {
+          "tag": "button",
+          "type": "button",
+          "role": "button",
+          "accessibleName": "Cancel",
+          "disabled": false,
+          "readOnly": false,
+          "instance": "details",
+          "options": [],
+          "visible": true
+        }
+      ]
+    }
+  ]
+}
